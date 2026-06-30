@@ -1,0 +1,602 @@
+[
+  {
+    "id": 1,
+    "distribution": "factual",
+    "question": "Nhân viên được nghỉ bao nhiêu ngày khi kết hôn?",
+    "answer": "**3 ngày làm việc.**\n\nTheo chính sách nghỉ phép đặc biệt, nhân viên được nghỉ có lương **3 ngày làm việc** khi kết hôn và không trừ vào phép năm.",
+    "contexts": [
+      "Trích từ thuong_tet.md.\n\nNhân viên nghỉ việc trước ngày chi trả sẽ không được hưởng thưởng Tết, trừ trường hợp nghỉ hưu hoặc hết hạn hợp đồng.",
+      "Trích từ nghi_phep_dac_biet.md.\n\nNhân viên cần cung cấp giấy tờ chứng minh trong vòng 5 ngày làm việc sau khi quay lại: giấy đăng ký kết hôn, giấy khai tử, giấy khai sinh. Trường hợp không cung cấp đầy đủ, số ngày nghỉ sẽ bị trừ vào phép năm. ## Lưu ý",
+      "Trích từ nghi_phep_dac_biet.md.\n\n# Chính sách nghỉ phép đặc biệt > Phiên bản: 1.1 | Ngày hiệu lực: 01/03/2024 | Phòng ban: Nhân sự ## Các trường hợp được nghỉ phép đặc biệt Nhân viên được nghỉ có lương trong các trường hợp sau đây mà không trừ vào phép năm: - **Kết hôn**: 3 ngày làm việc"
+    ],
+    "ground_truth": "Nhân viên được nghỉ 3 ngày làm việc có lương khi kết hôn, không trừ vào phép năm."
+  },
+  {
+    "id": 2,
+    "distribution": "factual",
+    "question": "Bảo hiểm sức khỏe PVI có hạn mức bao nhiêu cho nhân viên?",
+    "answer": "Theo context được cung cấp, bảo hiểm sức khỏe qua **PVI Insurance** cho nhân viên chính thức có hạn mức **200.000.000 VNĐ/năm**, bao gồm nội trú, ngoại trú và nha khoa.",
+    "contexts": [
+      "Trích từ nghi_om.md.\n\nCông ty có quyền yêu cầu khám sức khỏe tổng quát trước khi nhân viên quay lại làm việc.",
+      "Trích từ bao_hiem_suc_khoe.md.\n\nHạn mức bảo hiểm: **200.000.000 VNĐ/năm** bao gồm nội trú, ngoại trú và nha khoa. ## Gói gia đình Nhân viên có thể đăng ký thêm gói bảo hiểm cho người thân (vợ/chồng, con dưới 18 tuổi) với hạn mức **50.000.000 VNĐ/năm/người**.",
+      "Trích từ bao_hiem_suc_khoe.md.\n\n# Chính sách bảo hiểm sức khỏe > Phiên bản: 1.5 | Ngày hiệu lực: 01/04/2024 | Phòng ban: Nhân sự ## Bảo hiểm cho nhân viên Công ty cung cấp gói bảo hiểm sức khỏe toàn diện qua **PVI Insurance** cho tất cả nhân viên chính thức."
+    ],
+    "ground_truth": "Hạn mức bảo hiểm sức khỏe PVI cho nhân viên là 200.000.000 VNĐ/năm, bao gồm nội trú, ngoại trú và nha khoa."
+  },
+  {
+    "id": 3,
+    "distribution": "factual",
+    "question": "Phụ cấp ăn trưa hàng tháng là bao nhiêu?",
+    "answer": "Theo tài liệu **phu_cap.md**, phụ cấp ăn trưa hàng tháng là **1.000.000 VNĐ/tháng**, chi trả cùng kỳ lương.",
+    "contexts": [
+      "Trích từ phu_cap.md.\n\n# Chính sách phụ cấp > Phiên bản: 2.1 | Ngày hiệu lực: 01/01/2024 | Phòng ban: Nhân sự ## Phụ cấp ăn trưa Tất cả nhân viên được hưởng phụ cấp ăn trưa **1.000.000 VNĐ/tháng**, chi trả cùng kỳ lương.",
+      "Trích từ cong_tac_phi.md.\n\n# Chính sách công tác phí > Phiên bản: 1.5 | Ngày hiệu lực: 01/01/2024 | Phòng ban: Tài chính ## Công tác trong nước - **Phụ cấp ngày**: **800.000 VNĐ/ngày** (bao gồm ăn uống và di chuyển nội thành)",
+      "Trích từ thu_viec.md.\n\nPhụ cấp ăn trưa được áp dụng đầy đủ từ ngày đầu tiên. ## Quyền lợi trong thử việc Nhân viên thử việc **KHÔNG được nghỉ phép năm**. Trường hợp cần nghỉ việc riêng, nhân viên thử việc phải xin nghỉ không lương và được trưởng phòng phê duyệt."
+    ],
+    "ground_truth": "Phụ cấp ăn trưa là 1.000.000 VNĐ/tháng, chi trả cùng kỳ lương."
+  },
+  {
+    "id": 4,
+    "distribution": "factual",
+    "question": "Mentor và buddy của nhân viên mới có thể là cùng một người không? Quản lý trực tiếp có thể làm mentor không?",
+    "answer": "## Trả lời\n\n**1. Mentor và Buddy có thể là cùng một người không?**\n\n**Không.** Theo quy tắc trong `mentor_buddy.md`, Mentor và Buddy phải là **hai người khác nhau** để đảm bảo nhân viên mới có nhiều nguồn hỗ trợ đa dạng.\n\n---\n\n**2. Quản lý trực tiếp có thể làm Mentor không?**\n\n**Không.** Theo quy tắc trong `mentor_buddy.md`, quản lý trực tiếp **không được làm Mentor hoặc Buddy**.",
+    "contexts": [
+      "Trích từ mentor_buddy.md.\n\nBuddy là nhân viên cùng phòng ban, thâm niên từ 6 tháng. ## Quy tắc quan trọng Mentor và Buddy phải là **hai người khác nhau** để đảm bảo nhân viên mới có nhiều nguồn hỗ trợ đa dạng. Quản lý trực tiếp không được làm Mentor hoặc Buddy.",
+      "Trích từ mentor_buddy.md.\n\nMentor phải là nhân viên cấp Senior trở lên, khác phòng ban hoặc cùng phòng ban nhưng không phải quản lý trực tiếp. - **Buddy**: hỗ trợ **văn hóa và hòa nhập**, giúp nhân viên mới làm quen môi trường, giới thiệu đồng nghiệp, hướng dẫn quy trình hàng ngày.",
+      "Trích từ chi_phi_expense.md.\n\nChi phí dưới 200.000 VNĐ có thể khai báo không cần hóa đơn nhưng phải ghi rõ mục đích và ngày phát sinh. ## Phê duyệt Tất cả chi phí cần được phê duyệt bởi **quản lý trực tiếp** trước khi nộp phòng Tài chính."
+    ],
+    "ground_truth": "KHÔNG cho cả hai. Mentor và buddy phải là hai người khác nhau. Quản lý trực tiếp không được làm mentor hoặc buddy."
+  },
+  {
+    "id": 5,
+    "distribution": "factual",
+    "question": "Muốn mua thiết bị trị giá 55 triệu cần ai phê duyệt?",
+    "answer": "Không tìm thấy.\n\nThông tin thẩm quyền phê duyệt trong context chỉ cung cấp mức **dưới 5.000.000 VNĐ** (Trưởng phòng phê duyệt). Không có dữ liệu về người phê duyệt cho đơn hàng từ 55 triệu trở lên.",
+    "contexts": [
+      "Trích từ thu_viec.md.\n\nNhân viên thử việc được tham gia bảo hiểm xã hội bắt buộc nhưng chưa được hưởng gói bảo hiểm sức khỏe PVI. ## Đánh giá thử việc Quản lý trực tiếp thực hiện đánh giá vào ngày thứ 30 (giữa kỳ) và ngày thứ 55 (cuối kỳ).",
+      "Trích từ mua_sam.md.\n\n# Quy trình mua sắm > Phiên bản: 2.2 | Ngày hiệu lực: 01/04/2024 | Phòng ban: Hành chính & Tài chính ## Thẩm quyền phê duyệt | Giá trị đơn hàng | Người phê duyệt | |-------------------|-----------------| | Dưới **5.000.000 VNĐ** | Trưởng phòng (Manager) |",
+      "Trích từ mua_sam.md.\n\nMua sắm thiết bị CNTT (laptop, server, phần mềm) cần có xác nhận của phòng CNTT về cấu hình kỹ thuật trước khi đề xuất. Đơn hàng khẩn cấp có thể bỏ qua yêu cầu 3 báo giá nhưng phải có giải trình bằng văn bản."
+    ],
+    "ground_truth": "Đơn hàng trên 50.000.000 VNĐ cần Tổng Giám đốc (CEO) phê duyệt."
+  },
+  {
+    "id": 6,
+    "distribution": "factual",
+    "question": "Thông tin lương thuộc cấp độ phân loại dữ liệu nào?",
+    "answer": "Dựa trên tài liệu **ky_luong.md**, thông tin lương được xác định là dữ liệu **Bí mật** (cấm chia sẻ với đồng nghiệp).\n\nTuy nhiên, trong bảng phân loại dữ liệu từ **phan_loai_du_lieu.md** chỉ liệt kê cấp độ 1 (Công khai), chưa hiển thị đầy đủ các cấp độ còn lại (trong đó có cấp \"Bí mật\"). Dù vậy, từ nội dung chính sách lương, rõ ràng:\n\n> **Thông tin lương thuộc cấp độ phân loại: Bí mật.**",
+    "contexts": [
+      "Trích từ phan_loai_du_lieu.md.\n\n# Chính sách phân loại dữ liệu > Phiên bản: 1.0 | Ngày hiệu lực: 01/06/2024 | Phòng ban: CNTT & An ninh thông tin ## Bốn cấp độ phân loại | Cấp độ | Nhãn | Ví dụ | |--------|------|-------| | 1 | **Công khai** | Thông tin marketing, bài blog, tuyển dụng |",
+      "Trích từ ky_luong.md.\n\nPhiếu lương điện tử được gửi qua email công ty vào ngày chi trả. Thắc mắc về lương liên hệ phòng Tài chính trong vòng 5 ngày làm việc. Thông tin lương là dữ liệu **Bí mật**, cấm chia sẻ với đồng nghiệp.",
+      "Trích từ bao_mat_su_co.md.\n\nTuyệt đối **không tự ý xử lý malware** hoặc tìm cách khắc phục mà không có sự hướng dẫn của đội CNTT. ## Phân loại sự cố - **Nghiêm trọng**: rò rỉ dữ liệu Bí mật/Tối mật, tấn công ransomware → xử lý trong 2 giờ"
+    ],
+    "ground_truth": "Theo quy chế chi trả lương, thông tin lương được phân loại là dữ liệu Bí mật (cấp 3), cấm chia sẻ với đồng nghiệp. Phải mã hóa khi truyền và hạn chế truy cập theo need-to-know."
+  },
+  {
+    "id": 7,
+    "distribution": "factual",
+    "question": "Nghỉ phép không lương 20 ngày cần ai phê duyệt?",
+    "answer": "## Trả lời\n\nDựa trên context được cung cấp:\n\n**Trưởng phòng** là người phê duyệt nghỉ phép không lương.\n\n> *Trích từ thu_viec.md:* \"Trường hợp cần nghỉ việc riêng, nhân viên thử việc phải xin nghỉ không lương và được **trưởng phòng** phê duyệt.\"\n\n**Lưu ý:** Context không đề cập cụ thể ai phê duyệt riêng cho trường hợp nghỉ 20 ngày. Chỉ có thông tin về người phê duyệt chung là **trưởng phòng** và quy trình phải nộp đơn trước ít nhất **7 ngày làm việc**.",
+    "contexts": [
+      "Trích từ thu_viec.md.\n\nPhụ cấp ăn trưa được áp dụng đầy đủ từ ngày đầu tiên. ## Quyền lợi trong thử việc Nhân viên thử việc **KHÔNG được nghỉ phép năm**. Trường hợp cần nghỉ việc riêng, nhân viên thử việc phải xin nghỉ không lương và được trưởng phòng phê duyệt.",
+      "Trích từ bang_luong_2024.md.\n\n# Bảng lương năm 2024 > Phiên bản: 3.0 | Ngày hiệu lực: 01/01/2024 | Phòng ban: Nhân sự & Tài chính ## Khung lương theo cấp bậc | Cấp bậc | Lương gross (VNĐ/tháng) | |----------|--------------------------| | Junior (P1-P2) | 12.000.000 - 20.000.000 |",
+      "Trích từ nghi_phep_khong_luong.md.\n\nThời gian nghỉ phép không lương tối đa là **30 ngày** trong một năm dương lịch. Nghỉ phép không lương không được tính thâm niên. ## Quy trình phê duyệt Đơn xin nghỉ phép không lương phải được nộp trước ít nhất 7 ngày làm việc."
+    ],
+    "ground_truth": "Nghỉ từ 16-30 ngày không lương cần phê duyệt của Giám đốc điều hành (CEO). Lưu ý: nghỉ trên 14 ngày không lương, nhân viên phải tự đóng phần bảo hiểm của mình."
+  },
+  {
+    "id": 8,
+    "distribution": "factual",
+    "question": "Nhân viên được nghỉ bao nhiêu ngày khi cha hoặc mẹ mất?",
+    "answer": "Không tìm thấy.\n\nCác tài liệu được cung cấp (thưởng Tết, bảo mật sự cố, phụ cấp) không chứa thông tin về số ngày nghỉ khi cha hoặc mẹ mất.",
+    "contexts": [
+      "Trích từ thuong_tet.md.\n\nNhân viên nghỉ việc trước ngày chi trả sẽ không được hưởng thưởng Tết, trừ trường hợp nghỉ hưu hoặc hết hạn hợp đồng.",
+      "Trích từ bao_mat_su_co.md.\n\nKhi phát hiện hoặc nghi ngờ sự cố bảo mật, nhân viên **phải báo cáo trong vòng 1 giờ** qua email **helpdesk@cty.vn** hoặc hotline CNTT nội bộ (ext. 9999).",
+      "Trích từ phu_cap.md.\n\nPhụ cấp này không áp dụng cho những ngày nghỉ phép, nghỉ ốm hoặc công tác ngoài. ## Phụ cấp đi lại Nhân viên có tần suất công tác ngoài văn phòng trên 8 ngày/tháng được hưởng phụ cấp đi lại theo thực tế, tối đa **2.000.000 VNĐ/tháng**."
+    ],
+    "ground_truth": "Nhân viên được nghỉ 3 ngày làm việc có lương khi cha mẹ mất (tang lễ). Không trừ vào phép năm."
+  },
+  {
+    "id": 9,
+    "distribution": "factual",
+    "question": "Nam nhân viên được nghỉ bao nhiêu ngày khi vợ sinh con?",
+    "answer": "**5 ngày làm việc liên tục.**\n\nTheo quy định từ chính sách nghỉ phép đặc biệt, nam giới được nghỉ **5 ngày làm việc liên tục** khi sinh con.",
+    "contexts": [
+      "Trích từ thuong_tet.md.\n\nNhân viên nghỉ việc trước ngày chi trả sẽ không được hưởng thưởng Tết, trừ trường hợp nghỉ hưu hoặc hết hạn hợp đồng.",
+      "Trích từ nghi_phep_dac_biet.md.\n\nNhân viên cần cung cấp giấy tờ chứng minh trong vòng 5 ngày làm việc sau khi quay lại: giấy đăng ký kết hôn, giấy khai tử, giấy khai sinh. Trường hợp không cung cấp đầy đủ, số ngày nghỉ sẽ bị trừ vào phép năm. ## Lưu ý",
+      "Trích từ nghi_phep_dac_biet.md.\n\n- **Tang lễ** (cha mẹ, vợ/chồng, con): 3 ngày làm việc - **Sinh con** (nam giới): 5 ngày làm việc liên tục - **Con kết hôn**: 1 ngày làm việc ## Hồ sơ cần thiết"
+    ],
+    "ground_truth": "Nam nhân viên được nghỉ 5 ngày làm việc liên tục khi vợ sinh con, không trừ vào phép năm."
+  },
+  {
+    "id": 10,
+    "distribution": "factual",
+    "question": "Nhân viên chính thức được phép làm việc từ xa tối đa bao nhiêu ngày một tuần?",
+    "answer": "Nhân viên chính thức được phép làm việc từ xa tối đa **2 ngày/tuần**.",
+    "contexts": [
+      "Trích từ lam_viec_tu_xa.md.\n\n# Chính sách làm việc từ xa (WFH) > Phiên bản: 2.0 | Ngày hiệu lực: 01/07/2024 | Phòng ban: Nhân sự ## Quy định chung Nhân viên chính thức được phép làm việc từ xa tối đa **2 ngày/tuần**.",
+      "Trích từ thuong_tet.md.\n\n# Chính sách thưởng Tết > Phiên bản: 2.0 | Ngày hiệu lực: 01/11/2024 | Phòng ban: Nhân sự & Tài chính ## Mức thưởng tối thiểu Tất cả nhân viên chính thức có thời gian làm việc từ 6 tháng trở lên được thưởng Tết tối thiểu **1 tháng lương**.",
+      "Trích từ lam_viec_tu_xa.md.\n\nLịch WFH phải được đăng ký và phê duyệt bởi quản lý trực tiếp vào **thứ Hai** đầu tuần. ## Yêu cầu kỹ thuật - Kết nối **VPN** bắt buộc khi làm việc từ xa - Đảm bảo đường truyền internet ổn định (tối thiểu 20Mbps)"
+    ],
+    "ground_truth": "Nhân viên chính thức được phép làm việc từ xa tối đa 2 ngày/tuần. Lịch WFH phải được quản lý trực tiếp phê duyệt vào thứ Hai đầu tuần."
+  },
+  {
+    "id": 11,
+    "distribution": "factual",
+    "question": "VPN có bắt buộc không khi làm việc từ xa (WFH)?",
+    "answer": "## Trả lời\n\n**Có**, kết nối VPN là **bắt buộc** khi làm việc từ xa (WFH).\n\nTheo tài liệu `lam_viec_tu_xa.md`:\n\n> *\"Kết nối **VPN** bắt buộc khi làm việc từ xa\"*\n\nNgoài ra, theo `vpn_truy_cap.md`, cần lưu ý thêm các quy định sử dụng VPN:\n\n- **Không** chia sẻ thông tin đăng nhập VPN\n- **Ngắt kết nối** VPN khi không sử dụng\n- **Không** sử dụng VPN cá nhân (NordVPN, ExpressVPN) trong mạng công ty",
+    "contexts": [
+      "Trích từ lam_viec_tu_xa.md.\n\nLịch WFH phải được đăng ký và phê duyệt bởi quản lý trực tiếp vào **thứ Hai** đầu tuần. ## Yêu cầu kỹ thuật - Kết nối **VPN** bắt buộc khi làm việc từ xa - Đảm bảo đường truyền internet ổn định (tối thiểu 20Mbps)",
+      "Trích từ nghi_om.md.\n\nCông ty có quyền yêu cầu khám sức khỏe tổng quát trước khi nhân viên quay lại làm việc.",
+      "Trích từ vpn_truy_cap.md.\n\nThời gian xử lý: 1-2 ngày làm việc. ## Quy định sử dụng - Không chia sẻ thông tin đăng nhập VPN - Ngắt kết nối VPN khi không sử dụng - Không sử dụng VPN cá nhân (NordVPN, ExpressVPN) trong mạng công ty"
+    ],
+    "ground_truth": "Có, kết nối VPN WireGuard (AES-256) là BẮT BUỘC khi làm việc từ xa theo chính sách WFH v2.0 và VPN v1.3."
+  },
+  {
+    "id": 12,
+    "distribution": "factual",
+    "question": "Thưởng Tết tối thiểu cho nhân viên chính thức có từ 6 tháng trở lên là bao nhiêu?",
+    "answer": "Thưởng Tết tối thiểu cho nhân viên chính thức có thời gian làm việc từ 6 tháng trở lên là **1 tháng lương**.",
+    "contexts": [
+      "Trích từ thuong_tet.md.\n\n# Chính sách thưởng Tết > Phiên bản: 2.0 | Ngày hiệu lực: 01/11/2024 | Phòng ban: Nhân sự & Tài chính ## Mức thưởng tối thiểu Tất cả nhân viên chính thức có thời gian làm việc từ 6 tháng trở lên được thưởng Tết tối thiểu **1 tháng lương**.",
+      "Trích từ thuong_tet.md.\n\nNhân viên dưới 6 tháng được hưởng pro-rata theo số tháng làm việc thực tế. ## Tiêu chí tính thưởng Mức thưởng Tết được tính dựa trên hai yếu tố chính: - **Kết quả đánh giá hiệu suất cá nhân** (trọng số 60%): dựa trên kết quả đánh giá cuối năm",
+      "Trích từ mentor_buddy.md.\n\nBuddy là nhân viên cùng phòng ban, thâm niên từ 6 tháng. ## Quy tắc quan trọng Mentor và Buddy phải là **hai người khác nhau** để đảm bảo nhân viên mới có nhiều nguồn hỗ trợ đa dạng. Quản lý trực tiếp không được làm Mentor hoặc Buddy."
+    ],
+    "ground_truth": "Nhân viên chính thức có thời gian làm việc từ 6 tháng trở lên được thưởng Tết tối thiểu 1 tháng lương. Nhân viên dưới 6 tháng được hưởng pro-rata theo số tháng làm việc thực tế."
+  },
+  {
+    "id": 13,
+    "distribution": "factual",
+    "question": "Đánh giá hiệu suất diễn ra mấy lần một năm và vào tháng nào?",
+    "answer": "Theo tài liệu đánh giá hiệu suất, đánh giá hiệu suất được thực hiện **2 lần/năm** vào **tháng 6 và tháng 12**.",
+    "contexts": [
+      "Trích từ bang_luong_2024.md.\n\nSau khi hoàn thành thử việc, lương được điều chỉnh lên 100% kể từ ngày ký hợp đồng chính thức. ## Điều chỉnh lương Lương được xét tăng 2 lần/năm vào tháng 1 và tháng 7 dựa trên kết quả đánh giá hiệu suất.",
+      "Trích từ danh_gia_hieu_suat.md.\n\n# Quy trình đánh giá hiệu suất > Phiên bản: 2.0 | Ngày hiệu lực: 01/06/2024 | Phòng ban: Nhân sự ## Chu kỳ đánh giá Đánh giá hiệu suất được thực hiện **2 lần/năm** vào tháng 6 và tháng 12.",
+      "Trích từ danh_gia_hieu_suat.md.\n\nKết quả đánh giá giữa năm (tháng 6) dùng để điều chỉnh mục tiêu, kết quả cuối năm (tháng 12) dùng để xét tăng lương và thưởng. ## Cơ cấu đánh giá"
+    ],
+    "ground_truth": "Đánh giá hiệu suất diễn ra 2 lần/năm: tháng 6 (giữa năm, dùng để điều chỉnh mục tiêu) và tháng 12 (cuối năm, dùng để xét tăng lương và thưởng)."
+  },
+  {
+    "id": 14,
+    "distribution": "factual",
+    "question": "Nhân viên nghỉ ốm cần nộp giấy tờ gì và trong bao nhiêu ngày làm việc?",
+    "answer": "## Trả lời\n\nTheo trích từ **nghi_om.md**, nhân viên nghỉ ốm cần:\n\n- **Giấy tờ cần nộp:** Giấy xác nhận y tế (giấy khám bệnh hoặc giấy ra viện).\n- **Thời hạn nộp:** Trong vòng **3 ngày làm việc** kể từ ngày quay lại làm việc.",
+    "contexts": [
+      "Trích từ bao_hiem_suc_khoe.md.\n\nTrường hợp khám ngoài danh sách, nhân viên thanh toán trước và nộp hồ sơ bồi hoàn trong vòng 30 ngày. Thời gian xử lý bồi hoàn: 10-15 ngày làm việc.",
+      "Trích từ nghi_phep_dac_biet.md.\n\nNhân viên cần cung cấp giấy tờ chứng minh trong vòng 5 ngày làm việc sau khi quay lại: giấy đăng ký kết hôn, giấy khai tử, giấy khai sinh. Trường hợp không cung cấp đầy đủ, số ngày nghỉ sẽ bị trừ vào phép năm. ## Lưu ý",
+      "Trích từ nghi_om.md.\n\n# Chính sách nghỉ ốm > Phiên bản: 1.0 | Ngày hiệu lực: 01/01/2024 | Phòng ban: Nhân sự ## Quy định chung Nhân viên nghỉ ốm phải nộp giấy xác nhận y tế (giấy khám bệnh hoặc giấy ra viện) trong vòng **3 ngày làm việc** kể từ ngày quay lại làm việc."
+    ],
+    "ground_truth": "Phải nộp giấy xác nhận y tế (giấy khám bệnh hoặc giấy ra viện) trong vòng 3 ngày làm việc kể từ ngày quay lại. Nếu không có giấy tờ hợp lệ, ngày nghỉ bị trừ vào phép năm."
+  },
+  {
+    "id": 15,
+    "distribution": "factual",
+    "question": "Tạm ứng dưới 5 triệu cần ai phê duyệt? Từ 5 triệu trở lên thì sao?",
+    "answer": "Dựa trên tài liệu được cung cấp, quy định phê duyệt tạm ứng như sau:\n\n*   **Tạm ứng dưới 5.000.000 VNĐ:** Do **trưởng phòng** phê duyệt.\n*   **Tạm ứng từ 5.000.000 VNĐ trở lên:** Cần thêm phê duyệt của **Kế toán trưởng**.",
+    "contexts": [
+      "Trích từ tam_ung.md.\n\nNhân viên có khoản tạm ứng chưa thanh toán sẽ không được phê duyệt tạm ứng mới. ## Phê duyệt Tạm ứng dưới 5.000.000 VNĐ: trưởng phòng phê duyệt. Từ 5.000.000 VNĐ trở lên: cần thêm phê duyệt Kế toán trưởng.",
+      "Trích từ nghi_phep_nam_v2024.md.\n\nVí dụ: nhân viên 9 năm thâm niên được 18 ngày phép (15 + 3). ## Quy định sử dụng Phép năm phải được đăng ký trước ít nhất 2 ngày làm việc qua hệ thống HR Portal. Nghỉ phép từ 5 ngày trở lên cần được trưởng phòng phê duyệt.",
+      "Trích từ chi_phi_expense.md.\n\nThời gian xử lý hoàn ứng: 5-10 ngày làm việc sau khi hồ sơ đầy đủ và được phê duyệt. ## Lưu ý Chi phí công tác phải tuân theo Chính sách công tác phí riêng."
+    ],
+    "ground_truth": "Tạm ứng dưới 5.000.000 VNĐ chỉ cần Trưởng phòng phê duyệt. Từ 5.000.000 VNĐ trở lên cần thêm phê duyệt của Kế toán trưởng."
+  },
+  {
+    "id": 16,
+    "distribution": "factual",
+    "question": "Tài khoản VPN bị khóa tự động sau bao nhiêu ngày không hoạt động?",
+    "answer": "Tài khoản VPN tự động bị khóa sau **60 ngày** không hoạt động.",
+    "contexts": [
+      "Trích từ vpn_truy_cap.md.\n\nNhân viên tải cấu hình VPN từ IT Portal hoặc liên hệ helpdesk@cty.vn. ## Quản lý tài khoản VPN Tài khoản VPN tự động bị **khóa sau 60 ngày không hoạt động**. Để kích hoạt lại, nhân viên cần gửi yêu cầu qua ticket IT kèm xác nhận của quản lý trực tiếp.",
+      "Trích từ vpn_truy_cap.md.\n\n- Phiên VPN tự động ngắt sau 12 giờ, cần đăng nhập lại",
+      "Trích từ mat_khau_v2.md.\n\nTài khoản bị khóa sau 5 lần nhập sai liên tiếp. ## Chính sách thay thế Văn bản này thay thế Chính sách mật khẩu v1.0 ban hành ngày 01/01/2022."
+    ],
+    "ground_truth": "Tài khoản VPN tự động bị khóa sau 60 ngày không hoạt động. Để kích hoạt lại cần gửi ticket IT kèm xác nhận quản lý trực tiếp, thời gian xử lý 1-2 ngày làm việc."
+  },
+  {
+    "id": 17,
+    "distribution": "factual",
+    "question": "Phụ cấp điện thoại dành cho những cấp bậc nào và mức bao nhiêu?",
+    "answer": "**Phụ cấp điện thoại** được quy định như sau:\n\n- **Manager trở lên:** 500.000 VNĐ/tháng\n- **Lead:** 300.000 VNĐ/tháng\n\nCác cấp bậc khác **không** có phụ cấp điện thoại.",
+    "contexts": [
+      "Trích từ phu_cap.md.\n\nCác cấp bậc khác không có phụ cấp điện thoại. ## Phụ cấp khác Nhân viên làm việc ca đêm (sau 22h) được phụ cấp 30% lương giờ. Nhân viên làm thêm giờ cuối tuần được tính 200% lương giờ theo quy định pháp luật.",
+      "Trích từ phu_cap.md.\n\nPhải có chứng từ hợp lệ (vé xe, hóa đơn xăng, Grab receipt). ## Phụ cấp điện thoại Nhân viên cấp Manager trở lên được hưởng phụ cấp điện thoại **500.000 VNĐ/tháng**. Nhân viên cấp Lead được hưởng 300.000 VNĐ/tháng.",
+      "Trích từ phu_cap.md.\n\nPhụ cấp này không áp dụng cho những ngày nghỉ phép, nghỉ ốm hoặc công tác ngoài. ## Phụ cấp đi lại Nhân viên có tần suất công tác ngoài văn phòng trên 8 ngày/tháng được hưởng phụ cấp đi lại theo thực tế, tối đa **2.000.000 VNĐ/tháng**."
+    ],
+    "ground_truth": "Cấp Manager trở lên: 500.000 VNĐ/tháng. Cấp Lead: 300.000 VNĐ/tháng. Các cấp bậc khác (Junior, Senior) không có phụ cấp điện thoại."
+  },
+  {
+    "id": 18,
+    "distribution": "factual",
+    "question": "Cơ cấu điểm đánh giá hiệu suất gồm những thành phần nào và tỷ lệ ra sao?",
+    "answer": "**Không tìm thấy.**\n\nTrong các tài liệu được cung cấp, mục **\"## Cơ cấu đánh giá\"** trong `danh_gia_hieu_suat.md` có được đề cập, nhưng **không có nội dung chi tiết** về các thành phần điểm đánh giá hiệu suất cũng như tỷ lệ (%) của từng thành phần.\n\nThông tin hiện có chỉ nêu:\n\n- **Kết quả đánh giá giữa năm (tháng 6):** dùng để điều chỉnh mục tiêu.\n- **Kết quả cuối năm (tháng 12):** dùng để xét tăng lương và thưởng.\n\nĐể trả lời chính xác câu hỏi này, cần bổ sung thêm nội dung chi tiết về cơ cấu điểm đánh giá từ tài liệu `danh_gia_hieu_suat.md` hoặc các nguồn liên quan khác.",
+    "contexts": [
+      "Trích từ bang_luong_2024.md.\n\nSau khi hoàn thành thử việc, lương được điều chỉnh lên 100% kể từ ngày ký hợp đồng chính thức. ## Điều chỉnh lương Lương được xét tăng 2 lần/năm vào tháng 1 và tháng 7 dựa trên kết quả đánh giá hiệu suất.",
+      "Trích từ danh_gia_hieu_suat.md.\n\nKết quả đánh giá giữa năm (tháng 6) dùng để điều chỉnh mục tiêu, kết quả cuối năm (tháng 12) dùng để xét tăng lương và thưởng. ## Cơ cấu đánh giá",
+      "Trích từ dao_tao_noi_bo.md.\n\nNhân viên có thể đăng ký khóa học qua hệ thống Learning Portal và cần phê duyệt của trưởng phòng. ## Đánh giá hiệu quả Sau mỗi khóa đào tạo, nhân viên cần hoàn thành bài đánh giá và khảo sát phản hồi."
+    ],
+    "ground_truth": "KPI cá nhân chiếm 70% tổng điểm (do quản lý trực tiếp đánh giá). Peer review chiếm 30% (do 3-5 đồng nghiệp đánh giá về hợp tác, giao tiếp và chuyên môn)."
+  },
+  {
+    "id": 19,
+    "distribution": "factual",
+    "question": "Thời gian thử việc tiêu chuẩn và tối đa (dành cho Manager trở lên) là bao nhiêu ngày?",
+    "answer": "Dựa trên tài liệu:\n\n- **Thời gian thử việc tiêu chuẩn**: **60 ngày** kể từ ngày bắt đầu làm việc.\n- **Thời gian thử việc tối đa** (dành cho vị trí quản lý cấp cao, Manager trở lên): có thể kéo dài đến **90 ngày**.",
+    "contexts": [
+      "Trích từ thu_viec.md.\n\nĐối với vị trí quản lý cấp cao (Manager trở lên), thời gian thử việc có thể kéo dài đến 90 ngày. ## Lương thử việc Nhân viên thử việc được nhận **85% mức lương** của cấp bậc tương ứng theo bảng lương công ty.",
+      "Trích từ cong_tac_phi.md.\n\n- **Khách sạn**: tối đa **1.200.000 VNĐ/đêm**, thanh toán theo hóa đơn thực tế - **Vé máy bay**: hạng phổ thông, đặt trước ít nhất 5 ngày. Cấp Manager trở lên được bay hạng thương gia cho chặng trên 2 giờ ## Công tác nước ngoài",
+      "Trích từ thu_viec.md.\n\n# Chính sách thử việc > Phiên bản: 1.2 | Ngày hiệu lực: 01/01/2024 | Phòng ban: Nhân sự ## Thời gian thử việc Thời gian thử việc tiêu chuẩn là **60 ngày** kể từ ngày bắt đầu làm việc."
+    ],
+    "ground_truth": "Thời gian thử việc tiêu chuẩn là 60 ngày. Đối với vị trí Manager trở lên, có thể kéo dài đến 90 ngày."
+  },
+  {
+    "id": 20,
+    "distribution": "factual",
+    "question": "Phụ cấp đi lại tối đa mỗi tháng là bao nhiêu và điều kiện để được hưởng là gì?",
+    "answer": "Phụ cấp đi lại tối đa mỗi tháng là **2.000.000 VNĐ**. Điều kiện để được hưởng là nhân viên có tần suất công tác ngoài văn phòng trên **8 ngày/tháng**.",
+    "contexts": [
+      "Trích từ phu_cap.md.\n\nPhụ cấp này không áp dụng cho những ngày nghỉ phép, nghỉ ốm hoặc công tác ngoài. ## Phụ cấp đi lại Nhân viên có tần suất công tác ngoài văn phòng trên 8 ngày/tháng được hưởng phụ cấp đi lại theo thực tế, tối đa **2.000.000 VNĐ/tháng**.",
+      "Trích từ mentor_buddy.md.\n\nBuddy là nhân viên cùng phòng ban, thâm niên từ 6 tháng. ## Quy tắc quan trọng Mentor và Buddy phải là **hai người khác nhau** để đảm bảo nhân viên mới có nhiều nguồn hỗ trợ đa dạng. Quản lý trực tiếp không được làm Mentor hoặc Buddy.",
+      "Trích từ phu_cap.md.\n\n# Chính sách phụ cấp > Phiên bản: 2.1 | Ngày hiệu lực: 01/01/2024 | Phòng ban: Nhân sự ## Phụ cấp ăn trưa Tất cả nhân viên được hưởng phụ cấp ăn trưa **1.000.000 VNĐ/tháng**, chi trả cùng kỳ lương."
+    ],
+    "ground_truth": "Tối đa 2.000.000 VNĐ/tháng, dành cho nhân viên có tần suất công tác ngoài văn phòng trên 8 ngày/tháng. Phải có chứng từ hợp lệ (vé xe, hóa đơn xăng, Grab receipt)."
+  },
+  {
+    "id": 21,
+    "distribution": "multi_hop",
+    "question": "Một nhân viên Senior có 9 năm thâm niên được nghỉ bao nhiêu ngày phép năm và lương trong khoảng nào?",
+    "answer": "## Trả lời\n\n**Về số ngày phép năm:**\n\nTheo chính sách **nghỉ phép năm 2024** (`nghi_phep_nam_v2024.md`):\n\n- Nhân viên có thâm niên từ **3 năm trở lên** được cộng thêm **1 ngày phép** cho mỗi 3 năm làm việc liên tục.\n- Nhân viên có **9 năm thâm niên** → được cộng thêm **3 ngày** (9 ÷ 3 = 3).\n- Tổng: **15 + 3 = 18 ngày phép năm**.\n\n> *(Chính sách 2024 thay thế hoàn toàn phiên bản 1.0 – 2023. Theo bản 2023, nhân viên 9 năm thâm niên chỉ được 14 ngày, nhưng chính sách hiện tại áp dụng là 18 ngày.)*\n\n**Về lương:**\n\n**Không tìm thấy.** Trong các tài liệu được trích dẫn không đề cập đến thông tin về lương hay khoảng lương của nhân viên Senior.",
+    "contexts": [
+      "Trích từ nghi_phep_nam_v2024.md.\n\nVí dụ: nhân viên 9 năm thâm niên được 18 ngày phép (15 + 3). ## Quy định sử dụng Phép năm phải được đăng ký trước ít nhất 2 ngày làm việc qua hệ thống HR Portal. Nghỉ phép từ 5 ngày trở lên cần được trưởng phòng phê duyệt.",
+      "Trích từ nghi_phep_nam_v2024.md.\n\nChính sách này thay thế hoàn toàn phiên bản 1.0 ban hành ngày 01/01/2023. ## Thâm niên công tác Nhân viên có thâm niên từ **3 năm trở lên** được cộng thêm **1 ngày phép** cho mỗi 3 năm làm việc liên tục.",
+      "Trích từ nghi_phep_nam_v2023.md.\n\nNhân viên có thâm niên từ **5 năm trở lên** được cộng thêm **1 ngày phép** cho mỗi 5 năm làm việc liên tục. Ví dụ: nhân viên 10 năm thâm niên được 14 ngày phép. ## Quy định sử dụng"
+    ],
+    "ground_truth": "Theo chính sách v2024: 15 ngày cơ bản + 3 ngày thâm niên (9÷3=3) = 18 ngày phép. Lương Senior (P3-P4): 20-35 triệu VNĐ/tháng."
+  },
+  {
+    "id": 22,
+    "distribution": "multi_hop",
+    "question": "Nếu cần mua một chiếc laptop 30 triệu cho nhân viên mới, ai phê duyệt và cần gì từ phòng CNTT?",
+    "answer": "**Không tìm thấy.**\n\nTrong các tài liệu được cung cấp, không có chính sách nào đề cập đến việc mua sắm thiết bị (laptop) hay quy trình phê duyệt từ phòng CNTT. Các trích đoạn chỉ liên quan đến chi phí đào tạo, nghỉ phép không lương và nghỉ ốm.",
+    "contexts": [
+      "Trích từ hoan_chi_dao_tao.md.\n\nCông ty chi trả chi phí đào tạo bên ngoài (chứng chỉ, khóa học dài hạn, hội thảo) cho nhân viên có **thâm niên từ 1 năm trở lên**. Chi phí được tài trợ tối đa **30.000.000 VNĐ/khóa** và cần phê duyệt của Giám đốc phòng ban. ## Cam kết hoàn chi",
+      "Trích từ nghi_phep_khong_luong.md.\n\nNghỉ từ 1-5 ngày: trưởng phòng phê duyệt. Nghỉ từ 6-15 ngày: cần thêm phê duyệt của Giám đốc Nhân sự. Nghỉ từ 16-30 ngày: cần phê duyệt của **Giám đốc điều hành (CEO)**. ## Ảnh hưởng đến phúc lợi",
+      "Trích từ nghi_om.md.\n\nCông ty bổ sung thêm 25% để đảm bảo nhân viên nhận đủ 100% lương cơ bản. ## Nghỉ ốm dài hạn Trường hợp nghỉ ốm trên 30 ngày/năm, nhân viên cần liên hệ phòng Nhân sự để được hướng dẫn chế độ bảo hiểm dài hạn."
+    ],
+    "ground_truth": "Laptop 30 triệu nằm trong khoảng 5-50 triệu nên cần Giám đốc phòng ban (Director) phê duyệt. Cần đính kèm ít nhất 3 báo giá (trên 10 triệu). Mua sắm thiết bị CNTT cần xác nhận cấu hình kỹ thuật từ phòng CNTT trước khi đề xuất."
+  },
+  {
+    "id": 23,
+    "distribution": "multi_hop",
+    "question": "Nhân viên được tài trợ khóa học 25 triệu, nghỉ việc sau 8 tháng hoàn thành khóa học. Phải hoàn trả bao nhiêu?",
+    "answer": "Nhân viên phải hoàn trả **100% chi phí** đào tạo đã được tài trợ, tức là **25 triệu VNĐ**, vì nghỉ việc trước thời hạn cam kết 1 năm.",
+    "contexts": [
+      "Trích từ hoan_chi_dao_tao.md.\n\nNhân viên được tài trợ đào tạo phải **cam kết làm việc tại công ty ít nhất 1 năm** sau khi hoàn thành khóa học. Nếu nghỉ việc trước thời hạn cam kết, nhân viên phải hoàn trả **100% chi phí** đào tạo đã được tài trợ. ## Quy trình 1.",
+      "Trích từ phu_cap.md.\n\nPhụ cấp này không áp dụng cho những ngày nghỉ phép, nghỉ ốm hoặc công tác ngoài. ## Phụ cấp đi lại Nhân viên có tần suất công tác ngoài văn phòng trên 8 ngày/tháng được hưởng phụ cấp đi lại theo thực tế, tối đa **2.000.000 VNĐ/tháng**.",
+      "Trích từ nghi_om.md.\n\nCông ty bổ sung thêm 25% để đảm bảo nhân viên nhận đủ 100% lương cơ bản. ## Nghỉ ốm dài hạn Trường hợp nghỉ ốm trên 30 ngày/năm, nhân viên cần liên hệ phòng Nhân sự để được hướng dẫn chế độ bảo hiểm dài hạn."
+    ],
+    "ground_truth": "Nhân viên phải cam kết làm việc ít nhất 1 năm sau khi hoàn thành khóa học. Nghỉ sau 8 tháng là trước hạn cam kết, phải hoàn trả 100% chi phí tức 25.000.000 VNĐ."
+  },
+  {
+    "id": 24,
+    "distribution": "multi_hop",
+    "question": "Nhân viên tạm ứng 15 triệu, sau 20 ngày mới thanh toán. Bị phạt bao nhiêu?",
+    "answer": "# Kết quả\n\nTheo chính sách tạm ứng từ **tam_ung.md**:\n\n> \"Khoản tạm ứng chưa thanh toán sau **15 ngày** sẽ bị tính phí **2%/tháng** trên số tiền chưa hoàn ứng.\"\n\nNhân viên thanh toán sau **20 ngày** (vượt quá 15 ngày), nên **bị áp phí phạt**.\n\n## Tính toán:\n\n- **Số tiền tạm ứng:** 15.000.000 VNĐ\n- **Phí phạt:** 2%/tháng × 15.000.000 = **300.000 VNĐ/tháng**\n\n⚠️ **Lưu ý:** Chính sách chỉ quy định phí **2%/tháng** mà không nêu rõ cách tính cho số ngày lẻ (20 ngày - 15 ngày = 5 ngày quá hạn). Do đó, mức phí chính xác cho trường hợp này (quá hạn 5 ngày) có thể được tính theo tỷ lệ ngày hoặc tròn theo tháng — cần xác nhận thêm với **Phòng Tài chính** để biết cách áp dụng cụ thể.",
+    "contexts": [
+      "Trích từ tam_ung.md.\n\nTrường hợp công tác dài ngày, thời hạn tính từ ngày kết thúc chuyến công tác. ## Phạt quá hạn Khoản tạm ứng chưa thanh toán sau 15 ngày sẽ bị tính phí **2%/tháng** trên số tiền chưa hoàn ứng. Phí này được khấu trừ vào lương tháng kế tiếp.",
+      "Trích từ bao_hiem_suc_khoe.md.\n\nTrường hợp khám ngoài danh sách, nhân viên thanh toán trước và nộp hồ sơ bồi hoàn trong vòng 30 ngày. Thời gian xử lý bồi hoàn: 10-15 ngày làm việc.",
+      "Trích từ tam_ung.md.\n\n# Chính sách tạm ứng > Phiên bản: 1.0 | Ngày hiệu lực: 01/01/2024 | Phòng ban: Tài chính ## Hạn mức tạm ứng Nhân viên có thể tạm ứng tối đa **20.000.000 VNĐ** cho mỗi lần đề xuất."
+    ],
+    "ground_truth": "Thời hạn thanh toán là 15 ngày. Quá hạn 5 ngày: phí 2%/tháng trên 15.000.000 VNĐ, tính pro-rata = 2% × 15.000.000 × (5/30) ≈ 50.000 VNĐ."
+  },
+  {
+    "id": 25,
+    "distribution": "multi_hop",
+    "question": "Lương thử việc của nhân viên Junior mức cao nhất là bao nhiêu?",
+    "answer": "Không tìm thấy.\n\n**Lý do:** Context chỉ cho biết nhân viên thử việc được nhận **85% mức lương** của cấp bậc tương ứng, nhưng **không cung cấp thông tin về bảng lương cụ thể** của vị trí Junior (mức cao nhất). Do đó, không thể tính được con số chính xác.",
+    "contexts": [
+      "Trích từ thu_viec.md.\n\nĐối với vị trí quản lý cấp cao (Manager trở lên), thời gian thử việc có thể kéo dài đến 90 ngày. ## Lương thử việc Nhân viên thử việc được nhận **85% mức lương** của cấp bậc tương ứng theo bảng lương công ty.",
+      "Trích từ thuong_tet.md.\n\n# Chính sách thưởng Tết > Phiên bản: 2.0 | Ngày hiệu lực: 01/11/2024 | Phòng ban: Nhân sự & Tài chính ## Mức thưởng tối thiểu Tất cả nhân viên chính thức có thời gian làm việc từ 6 tháng trở lên được thưởng Tết tối thiểu **1 tháng lương**.",
+      "Trích từ thu_viec.md.\n\nPhụ cấp ăn trưa được áp dụng đầy đủ từ ngày đầu tiên. ## Quyền lợi trong thử việc Nhân viên thử việc **KHÔNG được nghỉ phép năm**. Trường hợp cần nghỉ việc riêng, nhân viên thử việc phải xin nghỉ không lương và được trưởng phòng phê duyệt."
+    ],
+    "ground_truth": "Junior cao nhất là 20.000.000 VNĐ/tháng. Lương thử việc = 85% × 20.000.000 = 17.000.000 VNĐ/tháng."
+  },
+  {
+    "id": 26,
+    "distribution": "multi_hop",
+    "question": "Nhân viên vừa kết hôn và cùng tuần đó có con kết hôn. Tổng số ngày nghỉ đặc biệt có lương là bao nhiêu?",
+    "answer": "Theo context, chỉ có **trường hợp nhân viên kết hôn** được nghỉ 3 ngày làm việc có lương, không trừ vào phép năm. Không có thông tin về nghỉ phép đặc biệt cho trường hợp **con kết hôn** trong chính sách được cung cấp.\n\nVậy tổng số ngày nghỉ đặc biệt có lương là **3 ngày** (cho trường hợp nhân viên kết hôn).",
+    "contexts": [
+      "Trích từ nghi_phep_dac_biet.md.\n\n# Chính sách nghỉ phép đặc biệt > Phiên bản: 1.1 | Ngày hiệu lực: 01/03/2024 | Phòng ban: Nhân sự ## Các trường hợp được nghỉ phép đặc biệt Nhân viên được nghỉ có lương trong các trường hợp sau đây mà không trừ vào phép năm: - **Kết hôn**: 3 ngày làm việc",
+      "Trích từ nghi_phep_dac_biet.md.\n\nPhép đặc biệt không cộng dồn và không chuyển sang năm sau. Ngày nghỉ được tính liên tục bao gồm cả ngày nghỉ cuối tuần nếu rơi vào giữa kỳ nghỉ.",
+      "Trích từ nghi_om.md.\n\nCông ty có quyền yêu cầu khám sức khỏe tổng quát trước khi nhân viên quay lại làm việc."
+    ],
+    "ground_truth": "Kết hôn bản thân: 3 ngày. Con kết hôn: 1 ngày. Tổng: 4 ngày làm việc có lương, tất cả không trừ vào phép năm."
+  },
+  {
+    "id": 27,
+    "distribution": "multi_hop",
+    "question": "Nhân viên có thâm niên 7 năm theo v2024 được nghỉ bao nhiêu ngày phép? Nếu bị trừ thêm 4 ngày ốm không có giấy y tế thì còn lại bao nhiêu?",
+    "answer": "Dựa trên context được cung cấp:\n\n**1. Số ngày phép theo thâm niên 7 năm (v2024):**\n- Theo chính sách nghỉ phép năm v2024: Nhân viên có thâm niên từ **3 năm trở lên** được cộng thêm **1 ngày phép** cho mỗi **3 năm làm việc liên tục**.\n- Với 7 năm thâm niên: 7 năm chia cho 3 năm = 2 lần (vì tính cho mỗi 3 năm liên tục). Vậy nhân viên được cộng thêm **2 ngày phép**.\n- **Tuy nhiên**, context không cung cấp số ngày phép năm cơ bản. Do đó, chỉ có thể biết rằng nhân viên được **thêm 2 ngày** so với số ngày phép năm cơ bản.\n\n**2. Sau khi trừ 4 ngày ốm không có giấy y tế:**\n- Chính sách nghỉ phép đặc biệt (nghị_phep_dac_biet.md) chỉ quy định nghỉ có lương cho các trường hợp như kết hôn, không đề cập đến nghỉ ốm không có giấy y tế.\n- Việc trừ 4 ngày ốm không giấy y tế có thể áp dụng theo quy định nội bộ khác, nhưng **không được đề cập trong context cung cấp**. Do đó, không thể xác định chính xác số ngày phép còn lại sau khi trừ.\n- Nếu giả định rằng 4 ngày ốm này bị trừ vào phép năm, thì số ngày phép còn lại sẽ là **(phép năm cơ bản + 2 ngày thâm niên) - 4 ngày**.\n\n**Tóm lại:**\n- Nhân viên có 7 năm thâm niên được **cộng thêm 2 ngày phép** theo v2024.\n- Không có thông tin về phép năm cơ bản và quy định trừ ngày ốm không giấy y tế trong context, nên **không thể tính toán chính xác số ngày phép còn lại**.",
+    "contexts": [
+      "Trích từ nghi_phep_nam_v2024.md.\n\nPhép năm không sử dụng hết có thể chuyển tối đa 5 ngày sang năm sau, hết hạn vào 31/03 năm kế tiếp. Nhân viên cũng có thể yêu cầu thanh toán bằng tiền cho số ngày phép còn lại.",
+      "Trích từ nghi_phep_nam_v2024.md.\n\nChính sách này thay thế hoàn toàn phiên bản 1.0 ban hành ngày 01/01/2023. ## Thâm niên công tác Nhân viên có thâm niên từ **3 năm trở lên** được cộng thêm **1 ngày phép** cho mỗi 3 năm làm việc liên tục.",
+      "Trích từ nghi_phep_dac_biet.md.\n\n# Chính sách nghỉ phép đặc biệt > Phiên bản: 1.1 | Ngày hiệu lực: 01/03/2024 | Phòng ban: Nhân sự ## Các trường hợp được nghỉ phép đặc biệt Nhân viên được nghỉ có lương trong các trường hợp sau đây mà không trừ vào phép năm: - **Kết hôn**: 3 ngày làm việc"
+    ],
+    "ground_truth": "Phép năm v2024: 15 ngày cơ bản + 2 ngày thâm niên (7÷3=2) = 17 ngày. Sau khi bị trừ 4 ngày ốm không giấy y tế: 17 - 4 = 13 ngày phép còn lại."
+  },
+  {
+    "id": 28,
+    "distribution": "multi_hop",
+    "question": "Nhân viên cấp Lead nhận tổng phụ cấp hàng tháng (ăn trưa + điện thoại) là bao nhiêu?",
+    "answer": "## Tổng phụ cấp hàng tháng của Nhân viên cấp Lead\n\nTheo chính sách phụ cấp:\n\n| Khoản phụ cấp | Mức hưởng |\n|---|---|\n| Phụ cấp ăn trưa | 1.000.000 VNĐ/tháng |\n| Phụ cấp điện thoại | 300.000 VNĐ/tháng |\n| **Tổng** | **1.300.000 VNĐ/tháng** |\n\nCả hai khoản đều được chi trả cùng kỳ lương.",
+    "contexts": [
+      "Trích từ phu_cap.md.\n\nPhải có chứng từ hợp lệ (vé xe, hóa đơn xăng, Grab receipt). ## Phụ cấp điện thoại Nhân viên cấp Manager trở lên được hưởng phụ cấp điện thoại **500.000 VNĐ/tháng**. Nhân viên cấp Lead được hưởng 300.000 VNĐ/tháng.",
+      "Trích từ phu_cap.md.\n\n# Chính sách phụ cấp > Phiên bản: 2.1 | Ngày hiệu lực: 01/01/2024 | Phòng ban: Nhân sự ## Phụ cấp ăn trưa Tất cả nhân viên được hưởng phụ cấp ăn trưa **1.000.000 VNĐ/tháng**, chi trả cùng kỳ lương.",
+      "Trích từ phu_cap.md.\n\nCác cấp bậc khác không có phụ cấp điện thoại. ## Phụ cấp khác Nhân viên làm việc ca đêm (sau 22h) được phụ cấp 30% lương giờ. Nhân viên làm thêm giờ cuối tuần được tính 200% lương giờ theo quy định pháp luật."
+    ],
+    "ground_truth": "Phụ cấp ăn trưa: 1.000.000 VNĐ. Phụ cấp điện thoại cấp Lead: 300.000 VNĐ. Tổng: 1.300.000 VNĐ/tháng."
+  },
+  {
+    "id": 29,
+    "distribution": "multi_hop",
+    "question": "Nhân viên tạm ứng 8 triệu, chưa thanh toán sau 30 ngày (quá hạn 15 ngày). Ai phê duyệt khoản này và phí phạt là bao nhiêu?",
+    "answer": "Dựa trên các context được cung cấp:\n\n**1. Ai phê duyệt khoản này?**\nKhông tìm thấy thông tin. Context từ `nghi_phep_khong_luong.md` chỉ đề cập đến phê duyệt cho nghỉ phép không lương, không liên quan đến phê duyệt khoản tạm ứng quá hạn. Context từ `tam_ung.md` không nêu rõ ai phê duyệt cho trường hợp quá hạn này.\n\n**2. Phí phạt là bao nhiêu?**\nTheo context từ `tam_ung.md`:\n> Khoản tạm ứng chưa thanh toán sau 15 ngày sẽ bị tính phí **2%/tháng** trên số tiền chưa hoàn ứng.\n\nÁp dụng cho khoản tạm ứng 8 triệu, quá hạn 15 ngày:\n- Phí phạt = 8.000.000 đồng × 2% = **160.000 đồng**.\n\nPhí này sẽ được khấu trừ vào lương tháng kế tiếp.",
+    "contexts": [
+      "Trích từ bao_hiem_suc_khoe.md.\n\nTrường hợp khám ngoài danh sách, nhân viên thanh toán trước và nộp hồ sơ bồi hoàn trong vòng 30 ngày. Thời gian xử lý bồi hoàn: 10-15 ngày làm việc.",
+      "Trích từ tam_ung.md.\n\nTrường hợp công tác dài ngày, thời hạn tính từ ngày kết thúc chuyến công tác. ## Phạt quá hạn Khoản tạm ứng chưa thanh toán sau 15 ngày sẽ bị tính phí **2%/tháng** trên số tiền chưa hoàn ứng. Phí này được khấu trừ vào lương tháng kế tiếp.",
+      "Trích từ nghi_phep_khong_luong.md.\n\nNghỉ từ 1-5 ngày: trưởng phòng phê duyệt. Nghỉ từ 6-15 ngày: cần thêm phê duyệt của Giám đốc Nhân sự. Nghỉ từ 16-30 ngày: cần phê duyệt của **Giám đốc điều hành (CEO)**. ## Ảnh hưởng đến phúc lợi"
+    ],
+    "ground_truth": "Phê duyệt: 8 triệu (≥5 triệu) cần Trưởng phòng + Kế toán trưởng. Phí phạt quá hạn 15 ngày: 2%/tháng × 8.000.000 × (15/30) = 80.000 VNĐ. Không được tạm ứng mới cho đến khi hoàn ứng."
+  },
+  {
+    "id": 30,
+    "distribution": "multi_hop",
+    "question": "So sánh quyền lợi bảo hiểm giữa nhân viên thử việc và nhân viên chính thức.",
+    "answer": "Dựa trên các trích đoạn cung cấp, so sánh quyền lợi bảo hiểm như sau:\n\n*   **Nhân viên thử việc:**\n    *   **Được tham gia** bảo hiểm xã hội bắt buộc (theo luật định).\n    *   **KHÔNG được hưởng** gói bảo hiểm sức khỏe PVI của công ty.\n\n*   **Nhân viên chính thức:**\n    *   **Được tham gia** bảo hiểm xã hội bắt buộc.\n    *   **Được cung cấp** gói bảo hiểm sức khỏe toàn diện qua PVI Insurance.\n\n**Tóm lại:** Điểm khác biệt chính là nhân viên chính thức được hưởng thêm gói bảo hiểm sức khỏe PVI, trong khi nhân viên thử việc thì không.",
+    "contexts": [
+      "Trích từ thu_viec.md.\n\nNhân viên thử việc được tham gia bảo hiểm xã hội bắt buộc nhưng chưa được hưởng gói bảo hiểm sức khỏe PVI. ## Đánh giá thử việc Quản lý trực tiếp thực hiện đánh giá vào ngày thứ 30 (giữa kỳ) và ngày thứ 55 (cuối kỳ).",
+      "Trích từ thu_viec.md.\n\nPhụ cấp ăn trưa được áp dụng đầy đủ từ ngày đầu tiên. ## Quyền lợi trong thử việc Nhân viên thử việc **KHÔNG được nghỉ phép năm**. Trường hợp cần nghỉ việc riêng, nhân viên thử việc phải xin nghỉ không lương và được trưởng phòng phê duyệt.",
+      "Trích từ bao_hiem_suc_khoe.md.\n\n# Chính sách bảo hiểm sức khỏe > Phiên bản: 1.5 | Ngày hiệu lực: 01/04/2024 | Phòng ban: Nhân sự ## Bảo hiểm cho nhân viên Công ty cung cấp gói bảo hiểm sức khỏe toàn diện qua **PVI Insurance** cho tất cả nhân viên chính thức."
+    ],
+    "ground_truth": "Nhân viên thử việc: chỉ được tham gia BHXH bắt buộc, KHÔNG được hưởng gói bảo hiểm sức khỏe PVI. Nhân viên chính thức: được hưởng BHXH + gói PVI hạn mức 200 triệu/năm (nội trú, ngoại trú, nha khoa)."
+  },
+  {
+    "id": 31,
+    "distribution": "multi_hop",
+    "question": "Nhân viên đi công tác trong nước 2 ngày, ở khách sạn giá 1.500.000 VNĐ/đêm. Công ty thanh toán tối đa bao nhiêu cho tiền khách sạn?",
+    "answer": "## Trả lời\n\nTheo chính sách công tác phí, quy định về khách sạn là:\n\n> **Khách sạn**: tối đa **1.200.000 VNĐ/đêm**, thanh toán theo hóa đơn thực tế.\n\nNhân viên ở khách sạn giá **1.500.000 VNĐ/đêm**, vượt quá mức tối đa, nên công ty chỉ thanh toán ở mức trần quy định:\n\n**1.200.000 VNĐ × 2 đêm = 2.400.000 VNĐ**\n\nPhần chênh lệch **(1.500.000 - 1.200.000) × 2 = 600.000 VNĐ** sẽ do nhân viên tự chi trả.",
+    "contexts": [
+      "Trích từ cong_tac_phi.md.\n\n- **Khách sạn**: tối đa **1.200.000 VNĐ/đêm**, thanh toán theo hóa đơn thực tế - **Vé máy bay**: hạng phổ thông, đặt trước ít nhất 5 ngày. Cấp Manager trở lên được bay hạng thương gia cho chặng trên 2 giờ ## Công tác nước ngoài",
+      "Trích từ phu_cap.md.\n\nPhụ cấp này không áp dụng cho những ngày nghỉ phép, nghỉ ốm hoặc công tác ngoài. ## Phụ cấp đi lại Nhân viên có tần suất công tác ngoài văn phòng trên 8 ngày/tháng được hưởng phụ cấp đi lại theo thực tế, tối đa **2.000.000 VNĐ/tháng**.",
+      "Trích từ cong_tac_phi.md.\n\n# Chính sách công tác phí > Phiên bản: 1.5 | Ngày hiệu lực: 01/01/2024 | Phòng ban: Tài chính ## Công tác trong nước - **Phụ cấp ngày**: **800.000 VNĐ/ngày** (bao gồm ăn uống và di chuyển nội thành)"
+    ],
+    "ground_truth": "Mức tối đa thanh toán khách sạn trong nước là 1.200.000 VNĐ/đêm. Cho 2 đêm: tối đa 2 × 1.200.000 = 2.400.000 VNĐ. Phần vượt (300.000 VNĐ/đêm) nhân viên tự chi trả."
+  },
+  {
+    "id": 32,
+    "distribution": "multi_hop",
+    "question": "Nhân viên mới đang trong tháng thứ 3 thử việc có BẮT BUỘC tham dự buổi đào tạo nội bộ của phòng ban không? Tại sao?",
+    "answer": "Có, nhân viên mới đang trong tháng thứ 3 thử việc **bắt buộc** tham dự tất cả các buổi đào tạo nội bộ của phòng ban.\n\n**Lý do:** Theo chính sách đào tạo nội bộ, nhân viên mới (trong 6 tháng đầu) bắt buộc phải tham gia tất cả các buổi đào tạo của phòng ban. Tháng thứ 3 nằm trong thời gian 6 tháng đầu, do đó áp dụng yêu cầu này.",
+    "contexts": [
+      "Trích từ dao_tao_noi_bo.md.\n\n# Chính sách đào tạo nội bộ > Phiên bản: 1.3 | Ngày hiệu lực: 01/01/2024 | Phòng ban: Nhân sự & Đào tạo ## Yêu cầu đào tạo Mỗi phòng ban phải tổ chức tối thiểu **2 buổi đào tạo/quý** về chuyên môn hoặc kỹ năng mềm.",
+      "Trích từ dao_tao_noi_bo.md.\n\nNhân viên mới (trong 6 tháng đầu) **bắt buộc** tham gia tất cả các buổi đào tạo của phòng ban. ## Ngân sách đào tạo Công ty dành ngân sách đào tạo **5.000.000 VNĐ/người/năm** cho các khóa học bên ngoài.",
+      "Trích từ mentor_buddy.md.\n\n## Thời gian chương trình Buddy hỗ trợ trong 3 tháng đầu. Mentor đồng hành trong 6 tháng đầu. Sau đó, nhân viên có thể tự chọn mentor dài hạn thông qua chương trình Mentor tự nguyện."
+    ],
+    "ground_truth": "Có, BẮT BUỘC. Theo chính sách đào tạo nội bộ, nhân viên mới trong 6 tháng đầu phải tham gia tất cả các buổi đào tạo của phòng ban. Nhân viên tháng thứ 3 (đang thử việc) vẫn nằm trong phạm vi 6 tháng đầu."
+  },
+  {
+    "id": 33,
+    "distribution": "multi_hop",
+    "question": "Nhân viên Manager có thâm niên 12 năm: tổng phụ cấp hàng tháng và số ngày phép năm theo v2024 là bao nhiêu?",
+    "answer": "**Không tìm thấy.**  \n\nLý do:  \n- File `nghi_phep_nam_v2024.md` chỉ ghi số ngày phép năm chung là **15 ngày**, không có quy định riêng cho thâm niên.  \n- Thông tin về **thâm niên công tác** chỉ có trong file `nghi_phep_nam_v2023.md`, không áp dụng cho năm 2024.  \n- File `bang_luong_2024.md` chỉ cung cấp khung lương cho cấp bậc **Junior**, không có thông tin về cấp bậc **Manager** hay các phụ cấp.",
+    "contexts": [
+      "Trích từ nghi_phep_nam_v2024.md.\n\n# Chính sách nghỉ phép năm (Phiên bản 2024) > Phiên bản: 2.0 | Ngày hiệu lực: 01/01/2024 | Phòng ban: Nhân sự ## Số ngày phép năm Mỗi nhân viên chính thức được hưởng **15 ngày phép năm** có lương, tăng từ 12 ngày so với chính sách năm 2023.",
+      "Trích từ bang_luong_2024.md.\n\n# Bảng lương năm 2024 > Phiên bản: 3.0 | Ngày hiệu lực: 01/01/2024 | Phòng ban: Nhân sự & Tài chính ## Khung lương theo cấp bậc | Cấp bậc | Lương gross (VNĐ/tháng) | |----------|--------------------------| | Junior (P1-P2) | 12.000.000 - 20.000.000 |",
+      "Trích từ nghi_phep_nam_v2023.md.\n\nSố ngày phép được tính theo năm dương lịch từ 01/01 đến 31/12. Nhân viên vào công ty giữa năm sẽ được tính pro-rata theo số tháng làm việc thực tế. ## Thâm niên công tác"
+    ],
+    "ground_truth": "Phụ cấp tháng: ăn trưa 1.000.000 + điện thoại Manager 500.000 = 1.500.000 VNĐ. Phép năm v2024: 15 ngày cơ bản + 4 ngày thâm niên (12÷3=4) = 19 ngày phép."
+  },
+  {
+    "id": 34,
+    "distribution": "multi_hop",
+    "question": "Nhân viên tạm ứng 4 triệu và một nhân viên khác tạm ứng 7 triệu: quy trình phê duyệt khác nhau thế nào?",
+    "answer": "Không tìm thấy thông tin về quy trình phê duyệt tạm ứng theo các mức tiền trong các tài liệu được cung cấp.",
+    "contexts": [
+      "Trích từ chi_phi_expense.md.\n\n# Quy trình chi phí và hoàn ứng > Phiên bản: 1.3 | Ngày hiệu lực: 01/01/2024 | Phòng ban: Tài chính ## Thời hạn nộp hồ sơ Nhân viên phải nộp hồ sơ hoàn ứng chi phí trong vòng **7 ngày** kể từ ngày phát sinh chi phí.",
+      "Trích từ mua_sam.md.\n\nĐính kèm ít nhất 3 báo giá cho đơn hàng trên 10.000.000 VNĐ 3. Chờ phê duyệt theo thẩm quyền tương ứng 4. Phòng Mua sắm đặt hàng và theo dõi giao nhận ## Lưu ý đặc biệt",
+      "Trích từ nghi_phep_khong_luong.md.\n\nThời gian nghỉ phép không lương tối đa là **30 ngày** trong một năm dương lịch. Nghỉ phép không lương không được tính thâm niên. ## Quy trình phê duyệt Đơn xin nghỉ phép không lương phải được nộp trước ít nhất 7 ngày làm việc."
+    ],
+    "ground_truth": "4 triệu (dưới 5 triệu): chỉ cần Trưởng phòng phê duyệt. 7 triệu (từ 5 triệu trở lên): cần cả Trưởng phòng VÀ Kế toán trưởng phê duyệt. Cả hai đều có thời hạn hoàn ứng 15 ngày."
+  },
+  {
+    "id": 35,
+    "distribution": "multi_hop",
+    "question": "Nhân viên Junior P1 có lương cơ bản 12 triệu vừa vào thử việc: nhận lương bao nhiêu và phụ cấp gì tháng đầu tiên?",
+    "answer": "**Không tìm thấy.**  \n\nCác tài liệu được cung cấp không có thông tin cụ thể về:  \n- Mức lương hoặc phụ cấp áp dụng cho nhân viên đang trong thời gian thử việc.  \n- Danh sách các loại phụ cấp (nếu có) trong tháng đầu tiên.",
+    "contexts": [
+      "Trích từ bang_luong_2024.md.\n\n# Bảng lương năm 2024 > Phiên bản: 3.0 | Ngày hiệu lực: 01/01/2024 | Phòng ban: Nhân sự & Tài chính ## Khung lương theo cấp bậc | Cấp bậc | Lương gross (VNĐ/tháng) | |----------|--------------------------| | Junior (P1-P2) | 12.000.000 - 20.000.000 |",
+      "Trích từ ky_luong.md.\n\nNhân viên chính thức được hưởng **lương tháng 13**, chi trả vào tháng 1 hàng năm (trước Tết Nguyên đán). Mức lương tháng 13 bằng 1 tháng lương cơ bản, tính pro-rata cho nhân viên chưa đủ 12 tháng. ## Phiếu lương",
+      "Trích từ nghi_phep_nam_v2023.md.\n\n# Chính sách nghỉ phép năm (Phiên bản 2023) > Phiên bản: 1.0 | Ngày hiệu lực: 01/01/2023 | Phòng ban: Nhân sự ## Số ngày phép năm Mỗi nhân viên chính thức được hưởng **12 ngày phép năm** có lương."
+    ],
+    "ground_truth": "Lương thử việc: 85% × 12.000.000 = 10.200.000 VNĐ. Phụ cấp ăn trưa áp dụng từ ngày đầu tiên: 1.000.000 VNĐ. Không có phụ cấp điện thoại (cấp Junior). Tổng nhận: 11.200.000 VNĐ."
+  },
+  {
+    "id": 36,
+    "distribution": "multi_hop",
+    "question": "Kết quả đánh giá hiệu suất tháng 6 và tháng 12 được dùng để làm gì khác nhau?",
+    "answer": "Dựa trên context được cung cấp, sự khác biệt là:\n\n*   **Kết quả đánh giá giữa năm (tháng 6)** được dùng để **điều chỉnh mục tiêu**.\n*   **Kết quả đánh giá cuối năm (tháng 12)** được dùng để **xét tăng lương và thưởng**.",
+    "contexts": [
+      "Trích từ danh_gia_hieu_suat.md.\n\nKết quả đánh giá giữa năm (tháng 6) dùng để điều chỉnh mục tiêu, kết quả cuối năm (tháng 12) dùng để xét tăng lương và thưởng. ## Cơ cấu đánh giá",
+      "Trích từ danh_gia_hieu_suat.md.\n\n# Quy trình đánh giá hiệu suất > Phiên bản: 2.0 | Ngày hiệu lực: 01/06/2024 | Phòng ban: Nhân sự ## Chu kỳ đánh giá Đánh giá hiệu suất được thực hiện **2 lần/năm** vào tháng 6 và tháng 12.",
+      "Trích từ thuong_tet.md.\n\nNhân viên dưới 6 tháng được hưởng pro-rata theo số tháng làm việc thực tế. ## Tiêu chí tính thưởng Mức thưởng Tết được tính dựa trên hai yếu tố chính: - **Kết quả đánh giá hiệu suất cá nhân** (trọng số 60%): dựa trên kết quả đánh giá cuối năm"
+    ],
+    "ground_truth": "Tháng 6 (giữa năm): dùng để điều chỉnh mục tiêu cho nửa năm còn lại. Tháng 12 (cuối năm): dùng để xét tăng lương và tính thưởng Tết. Cả hai đều dựa trên KPI 70% + Peer review 30%."
+  },
+  {
+    "id": 37,
+    "distribution": "multi_hop",
+    "question": "Nhân viên tự ý xóa malware khỏi máy và chia sẻ thông tin sự cố này trên Slack nội bộ. Vi phạm những chính sách nào cụ thể?",
+    "answer": "## Các chính sách bị vi phạm\n\nDựa trên các trích đoạn chính sách được cung cấp, nhân viên này vi phạm **2 quy định cụ thể**:\n\n### 1. Tự ý xử lý sự cố bảo mật (từ `bao_mat_su_co.md`)\n\n> *\"Không báo cáo sự cố hoặc **tự ý xử lý** sẽ bị xem là **vi phạm nghiêm trọng** quy chế bảo mật và có thể bị kỷ luật theo mức **cảnh cáo hoặc sa thải**.\"*\n\nNhân viên đã **tự ý xóa malware** mà không để bộ phận CNTT xử lý.\n\n### 2. Không báo cáo qua kênh chính thức (từ `bao_mat_su_co.md`)\n\n> *\"Khi phát hiện hoặc nghi ngờ sự cố bảo mật, nhân viên **phải báo cáo trong vòng 1 giờ** qua email **helpdesk@cty.vn** hoặc hotline CNTT nội bộ (ext. 9999).\"*\n\nThay vì báo cáo qua **email hoặc hotline chính thức**, nhân viên lại chia sẻ thông tin sự cố trên **Slack nội bộ** — đây không phải là kênh báo cáo sự cố được quy định.\n\n---\n\n### ⚠️ Hình thức kỷ luật có thể áp dụng\n\nTheo chính sách, mức kỷ luật cho vi phạm này là **cảnh cáo hoặc sa thải**.",
+    "contexts": [
+      "Trích từ bao_mat_su_co.md.\n\nKhông báo cáo sự cố hoặc tự ý xử lý sẽ bị xem là vi phạm nghiêm trọng quy chế bảo mật và có thể bị kỷ luật theo mức cảnh cáo hoặc sa thải.",
+      "Trích từ bao_mat_su_co.md.\n\nKhi phát hiện hoặc nghi ngờ sự cố bảo mật, nhân viên **phải báo cáo trong vòng 1 giờ** qua email **helpdesk@cty.vn** hoặc hotline CNTT nội bộ (ext. 9999).",
+      "Trích từ mat_khau_v2.md.\n\nKhuyến khích sử dụng passphrase dài hơn 16 ký tự. ## Xác thực đa yếu tố (MFA) Tất cả nhân viên **bắt buộc** kích hoạt MFA cho tài khoản email, VPN và các hệ thống nội bộ."
+    ],
+    "ground_truth": "Vi phạm 2 chính sách: (1) Quy trình xử lý sự cố bảo mật: tuyệt đối không tự xử lý, phải báo cáo trong 1 giờ qua helpdesk@cty.vn — vi phạm này có thể bị kỷ luật đến sa thải. (2) Chính sách phân loại dữ liệu: thông tin sự cố bảo mật thuộc Bí mật/Tối mật, chỉ được chia sẻ theo need-to-know, không chia sẻ rộng rãi."
+  },
+  {
+    "id": 38,
+    "distribution": "multi_hop",
+    "question": "Nhân viên đi công tác nước ngoài 4 ngày tại thành phố lớn, ở khách sạn 200 USD/đêm (3 đêm). Công ty thanh toán bao nhiêu tiền khách sạn?",
+    "answer": "## Trả lời\n\nTheo quy định trong **cong_tac_phi.md**, công tác nước ngoài tại **thành phố lớn** được phép ở khách sạn tối đa **200 USD/đêm**.\n\nNhân viên ở đúng mức tối đa này, trong **3 đêm**, nên công ty thanh toán:\n\n> **200 USD/đêm × 3 đêm = 600 USD**\n\n*(Lưu ý: Mặc dù chuyến công tác 4 ngày, nhưng số đêm lưu trú là 3 đêm.)*",
+    "contexts": [
+      "Trích từ cong_tac_phi.md.\n\n- Phụ cấp ngày theo quốc gia, thông thường 80-120 USD/ngày - Khách sạn tối đa 150 USD/đêm (thành phố lớn: 200 USD/đêm) - Bảo hiểm du lịch quốc tế bắt buộc, do công ty chi trả ## Quy trình thanh toán",
+      "Trích từ phan_loai_du_lieu.md.\n\n| 2 | **Nội bộ** | Quy trình nội bộ, biên bản họp, danh bạ nhân viên | | 3 | **Bí mật** | Dữ liệu khách hàng, hợp đồng, chiến lược kinh doanh | | 4 | **Tối mật** | Mã nguồn core, bí mật thương mại, kế hoạch M&A | ## Quy tắc xử lý",
+      "Trích từ cong_tac_phi.md.\n\n- **Khách sạn**: tối đa **1.200.000 VNĐ/đêm**, thanh toán theo hóa đơn thực tế - **Vé máy bay**: hạng phổ thông, đặt trước ít nhất 5 ngày. Cấp Manager trở lên được bay hạng thương gia cho chặng trên 2 giờ ## Công tác nước ngoài"
+    ],
+    "ground_truth": "Tại thành phố lớn nước ngoài, mức tối đa thanh toán khách sạn là 200 USD/đêm. Khách sạn 200 USD/đêm = đúng mức tối đa. 3 đêm × 200 USD = 600 USD được thanh toán đầy đủ."
+  },
+  {
+    "id": 39,
+    "distribution": "multi_hop",
+    "question": "So sánh yêu cầu mật khẩu giữa policy v1.0 và v2.0 về độ dài tối thiểu, thời hạn đổi và MFA.",
+    "answer": "Dựa trên context được cung cấp:\n\n**1. Độ dài tối thiểu:**\n*   **v1.0:** Yêu cầu tối thiểu **8 ký tự**.\n*   **v2.0:** Yêu cầu tối thiểu **12 ký tự**.\n\n**2. Thời hạn đổi mật khẩu:**\n*   Context **không đề cập** đến quy định về thời hạn đổi mật khẩu trong cả hai phiên bản v1.0 và v2.0.\n\n**3. Yêu cầu MFA (Xác thực đa yếu tố):**\n*   Context **không đề cập** đến yêu cầu MFA trong cả hai phiên bản v1.0 và v2.0.\n\n**Tóm tắt so sánh từ context:**\n| Tiêu chí | v1.0 | v2.0 |\n| :--- | :--- | :--- |\n| **Độ dài tối thiểu** | 8 ký tự | 12 ký tự |\n| **Thời hạn đổi** | Không có thông tin | Không có thông tin |\n| **Yêu cầu MFA** | Không có thông tin | Không có thông tin |",
+    "contexts": [
+      "Trích từ mat_khau_v1.md.\n\n# Chính sách mật khẩu (Phiên bản cũ) > Phiên bản: 1.0 | Ngày hiệu lực: 01/01/2022 | Phòng ban: CNTT | Trạng thái: ĐÃ THAY THẾ bởi v2.0 ## Yêu cầu mật khẩu Mật khẩu phải có tối thiểu **8 ký tự**, bao gồm ít nhất 1 chữ hoa, 1 chữ thường và 1 số.",
+      "Trích từ mat_khau_v2.md.\n\n# Chính sách mật khẩu (Phiên bản hiện hành) > Phiên bản: 2.0 | Ngày hiệu lực: 01/07/2024 | Phòng ban: CNTT ## Yêu cầu mật khẩu Mật khẩu phải có tối thiểu **12 ký tự**, bao gồm ít nhất 1 chữ hoa, 1 chữ thường, 1 số và 1 ký tự đặc biệt (!@#$%^&*).",
+      "Trích từ mat_khau_v1.md.\n\nChính sách này đã được thay thế bởi Chính sách mật khẩu v2.0 từ ngày 01/07/2024. Vui lòng tham khảo phiên bản mới để biết quy định hiện hành."
+    ],
+    "ground_truth": "v1.0 (đã hết hiệu lực): tối thiểu 8 ký tự, đổi mỗi 90 ngày, không yêu cầu MFA. v2.0 (hiện hành): tối thiểu 12 ký tự, đổi mỗi 120 ngày, MFA bắt buộc cho tất cả: email, VPN và hệ thống nội bộ."
+  },
+  {
+    "id": 40,
+    "distribution": "multi_hop",
+    "question": "Nhân viên thử việc tháng thứ 3 phát hiện vi phạm bảo mật. Họ nên và không nên làm gì theo chính sách?",
+    "answer": "# Hành động đúng khi phát hiện vi phạm bảo mật\n\nDựa trên chính sách được cung cấp trong **bao_mat_su_co.md**:\n\n## Nên làm\n- **Báo cáo sự cố** cho bộ phận có trách nhiệm theo quy định.\n\n## Không nên làm\n- **Không được tự ý xử lý** sự cố một mình.\n- **Không được ém nhẹm, không báo cáo** sự cố đã phát hiện.\n\n## Hậu quả nếu vi phạm\n\nTrích nguyên văn chính sách:\n\n> *\"Không báo cáo sự cố hoặc tự ý xử lý sẽ bị xem là **vi phạm nghiêm trọng** quy chế bảo mật và có thể bị kỷ luật theo mức **cảnh cáo hoặc sa thải**.\"*\n\nLưu ý: Nhân viên thử việc vẫn chịu ràng buộc bởi quy chế bảo mật này. Mức kỷ luật \"sa thải\" đối với người đang trong giai đoạn thử việc có thể đồng nghĩa với việc **chấm dứt hợp đồng thử việc**.",
+    "contexts": [
+      "Trích từ nghi_om.md.\n\n# Chính sách nghỉ ốm > Phiên bản: 1.0 | Ngày hiệu lực: 01/01/2024 | Phòng ban: Nhân sự ## Quy định chung Nhân viên nghỉ ốm phải nộp giấy xác nhận y tế (giấy khám bệnh hoặc giấy ra viện) trong vòng **3 ngày làm việc** kể từ ngày quay lại làm việc.",
+      "Trích từ mat_khau_v1.md.\n\nKhông được sử dụng tên đăng nhập hoặc các thông tin cá nhân dễ đoán làm mật khẩu. ## Chu kỳ thay đổi Mật khẩu phải được thay đổi **mỗi 90 ngày**. Hệ thống sẽ tự động nhắc nhở trước 7 ngày. Mật khẩu mới không được trùng với 3 mật khẩu gần nhất. ## Lưu ý",
+      "Trích từ bao_mat_su_co.md.\n\nKhông báo cáo sự cố hoặc tự ý xử lý sẽ bị xem là vi phạm nghiêm trọng quy chế bảo mật và có thể bị kỷ luật theo mức cảnh cáo hoặc sa thải."
+    ],
+    "ground_truth": "NÊN: báo cáo ngay trong vòng 1 giờ qua helpdesk@cty.vn hoặc hotline CNTT (ext. 9999). KHÔNG được: tự xử lý malware, xóa dấu vết, hoặc chia sẻ thông tin sự cố rộng rãi. Không báo cáo hoặc tự xử lý = vi phạm nghiêm trọng, có thể bị kỷ luật."
+  },
+  {
+    "id": 41,
+    "distribution": "adversarial",
+    "question": "Nhân viên được nghỉ bao nhiêu ngày phép năm?",
+    "answer": "**12 ngày phép năm** có lương (dành cho nhân viên chính thức).\n\n*Nguồn: nghi_phep_nam_v2023.md*",
+    "contexts": [
+      "Trích từ nghi_phep_dac_biet.md.\n\nPhép đặc biệt không cộng dồn và không chuyển sang năm sau. Ngày nghỉ được tính liên tục bao gồm cả ngày nghỉ cuối tuần nếu rơi vào giữa kỳ nghỉ.",
+      "Trích từ thuong_tet.md.\n\nNhân viên nghỉ việc trước ngày chi trả sẽ không được hưởng thưởng Tết, trừ trường hợp nghỉ hưu hoặc hết hạn hợp đồng.",
+      "Trích từ nghi_phep_nam_v2023.md.\n\n# Chính sách nghỉ phép năm (Phiên bản 2023) > Phiên bản: 1.0 | Ngày hiệu lực: 01/01/2023 | Phòng ban: Nhân sự ## Số ngày phép năm Mỗi nhân viên chính thức được hưởng **12 ngày phép năm** có lương."
+    ],
+    "ground_truth": "Theo chính sách v2024 HIỆN HÀNH: 15 ngày cơ bản (+1 ngày/3 năm thâm niên). Chính sách v2023 (đã bị thay thế) là 12 ngày. RAG có thể retrieve cả 2 tài liệu — câu trả lời đúng phải ưu tiên v2024."
+  },
+  {
+    "id": 42,
+    "distribution": "adversarial",
+    "question": "Thâm niên bao nhiêu năm thì được cộng thêm ngày phép?",
+    "answer": "Theo chính sách hiện hành (nghi_phep_nam_v2024.md), nhân viên có **thâm niên từ 3 năm trở lên** sẽ được cộng thêm ngày phép.\n\nCụ thể:\n- Từ **3 năm** thâm niên: được cộng thêm **1 ngày phép**.\n- Cứ mỗi **3 năm làm việc liên tục** tiếp theo sẽ được cộng thêm 1 ngày.\n- (Ví dụ: 6 năm, 9 năm, 12 năm... sẽ được cộng thêm 2, 3, 4 ngày...).\n\n**Lưu ý:** Chính sách này (v2024) thay thế hoàn toàn quy định trước đó (v2023) vốn yêu cầu từ 5 năm thâm niên.",
+    "contexts": [
+      "Trích từ nghi_phep_nam_v2024.md.\n\nChính sách này thay thế hoàn toàn phiên bản 1.0 ban hành ngày 01/01/2023. ## Thâm niên công tác Nhân viên có thâm niên từ **3 năm trở lên** được cộng thêm **1 ngày phép** cho mỗi 3 năm làm việc liên tục.",
+      "Trích từ nghi_phep_nam_v2023.md.\n\nNhân viên có thâm niên từ **5 năm trở lên** được cộng thêm **1 ngày phép** cho mỗi 5 năm làm việc liên tục. Ví dụ: nhân viên 10 năm thâm niên được 14 ngày phép. ## Quy định sử dụng",
+      "Trích từ nghi_phep_dac_biet.md.\n\nPhép đặc biệt không cộng dồn và không chuyển sang năm sau. Ngày nghỉ được tính liên tục bao gồm cả ngày nghỉ cuối tuần nếu rơi vào giữa kỳ nghỉ."
+    ],
+    "ground_truth": "Theo v2024 (hiện hành): từ 3 năm thâm niên, cứ mỗi 3 năm thêm 1 ngày. Chính sách v2023 (đã hết hiệu lực) yêu cầu 5 năm. Câu trả lời đúng là theo v2024."
+  },
+  {
+    "id": 43,
+    "distribution": "adversarial",
+    "question": "Mật khẩu phải có tối thiểu bao nhiêu ký tự?",
+    "answer": "Theo **chính sách mật khẩu phiên bản hiện hành (v2.0)**, mật khẩu phải có tối thiểu **12 ký tự** (bao gồm ít nhất 1 chữ hoa, 1 chữ thường, 1 số và 1 ký tự đặc biệt).\n\n> **Lưu ý:** Phiên bản cũ (v1.0) yêu cầu tối thiểu 8 ký tự, nhưng đã bị **thay thế** bởi v2.0 kể từ ngày 01/07/2024.",
+    "contexts": [
+      "Trích từ mat_khau_v2.md.\n\n# Chính sách mật khẩu (Phiên bản hiện hành) > Phiên bản: 2.0 | Ngày hiệu lực: 01/07/2024 | Phòng ban: CNTT ## Yêu cầu mật khẩu Mật khẩu phải có tối thiểu **12 ký tự**, bao gồm ít nhất 1 chữ hoa, 1 chữ thường, 1 số và 1 ký tự đặc biệt (!@#$%^&*).",
+      "Trích từ mat_khau_v1.md.\n\n# Chính sách mật khẩu (Phiên bản cũ) > Phiên bản: 1.0 | Ngày hiệu lực: 01/01/2022 | Phòng ban: CNTT | Trạng thái: ĐÃ THAY THẾ bởi v2.0 ## Yêu cầu mật khẩu Mật khẩu phải có tối thiểu **8 ký tự**, bao gồm ít nhất 1 chữ hoa, 1 chữ thường và 1 số.",
+      "Trích từ lam_viec_tu_xa.md.\n\nLịch WFH phải được đăng ký và phê duyệt bởi quản lý trực tiếp vào **thứ Hai** đầu tuần. ## Yêu cầu kỹ thuật - Kết nối **VPN** bắt buộc khi làm việc từ xa - Đảm bảo đường truyền internet ổn định (tối thiểu 20Mbps)"
+    ],
+    "ground_truth": "Theo v2.0 HIỆN HÀNH: tối thiểu 12 ký tự. Chính sách v1.0 (đã thay thế) yêu cầu 8 ký tự. RAG có thể lấy cả 2 tài liệu — câu trả lời đúng là 12 ký tự."
+  },
+  {
+    "id": 44,
+    "distribution": "adversarial",
+    "question": "Bao lâu phải đổi mật khẩu một lần?",
+    "answer": "Mật khẩu phải được thay đổi **mỗi 120 ngày**. Hệ thống sẽ tự động nhắc nhở trước 14 ngày.",
+    "contexts": [
+      "Trích từ mat_khau_v2.md.\n\nPhương thức MFA được chấp nhận: ứng dụng Authenticator (ưu tiên), SMS OTP, hoặc YubiKey. ## Chu kỳ thay đổi Mật khẩu phải được thay đổi **mỗi 120 ngày**. Hệ thống tự động nhắc nhở trước 14 ngày. Mật khẩu mới không được trùng với 5 mật khẩu gần nhất.",
+      "Trích từ mat_khau_v2.md.\n\nTài khoản bị khóa sau 5 lần nhập sai liên tiếp. ## Chính sách thay thế Văn bản này thay thế Chính sách mật khẩu v1.0 ban hành ngày 01/01/2022.",
+      "Trích từ mat_khau_v2.md.\n\n# Chính sách mật khẩu (Phiên bản hiện hành) > Phiên bản: 2.0 | Ngày hiệu lực: 01/07/2024 | Phòng ban: CNTT ## Yêu cầu mật khẩu Mật khẩu phải có tối thiểu **12 ký tự**, bao gồm ít nhất 1 chữ hoa, 1 chữ thường, 1 số và 1 ký tự đặc biệt (!@#$%^&*)."
+    ],
+    "ground_truth": "Theo v2.0 HIỆN HÀNH: mỗi 120 ngày. Chính sách v1.0 (đã hết hiệu lực) là 90 ngày. Câu trả lời đúng là 120 ngày."
+  },
+  {
+    "id": 45,
+    "distribution": "adversarial",
+    "question": "Có cần kích hoạt xác thực đa yếu tố (MFA) không?",
+    "answer": "Có. Theo chính sách, **tất cả nhân viên bắt buộc** kích hoạt MFA cho tài khoản email, VPN và các hệ thống nội bộ.",
+    "contexts": [
+      "Trích từ mat_khau_v2.md.\n\nKhuyến khích sử dụng passphrase dài hơn 16 ký tự. ## Xác thực đa yếu tố (MFA) Tất cả nhân viên **bắt buộc** kích hoạt MFA cho tài khoản email, VPN và các hệ thống nội bộ.",
+      "Trích từ vpn_truy_cap.md.\n\nNhân viên tải cấu hình VPN từ IT Portal hoặc liên hệ helpdesk@cty.vn. ## Quản lý tài khoản VPN Tài khoản VPN tự động bị **khóa sau 60 ngày không hoạt động**. Để kích hoạt lại, nhân viên cần gửi yêu cầu qua ticket IT kèm xác nhận của quản lý trực tiếp.",
+      "Trích từ phu_cap.md.\n\nPhụ cấp này không áp dụng cho những ngày nghỉ phép, nghỉ ốm hoặc công tác ngoài. ## Phụ cấp đi lại Nhân viên có tần suất công tác ngoài văn phòng trên 8 ngày/tháng được hưởng phụ cấp đi lại theo thực tế, tối đa **2.000.000 VNĐ/tháng**."
+    ],
+    "ground_truth": "Có, theo v2.0 HIỆN HÀNH, MFA bắt buộc cho tất cả nhân viên: email, VPN và hệ thống nội bộ. Policy v1.0 cũ không yêu cầu MFA — đây là bẫy version conflict."
+  },
+  {
+    "id": 46,
+    "distribution": "adversarial",
+    "question": "Nhân viên thử việc có được nghỉ phép năm không?",
+    "answer": "Không. Theo trích dẫn từ **thu_viec.md**, nhân viên thử việc **KHÔNG được nghỉ phép năm**. Trường hợp cần nghỉ việc riêng, nhân viên thử việc phải xin nghỉ không lương và được trưởng phòng phê duyệt.",
+    "contexts": [
+      "Trích từ thuong_tet.md.\n\nNhân viên nghỉ việc trước ngày chi trả sẽ không được hưởng thưởng Tết, trừ trường hợp nghỉ hưu hoặc hết hạn hợp đồng.",
+      "Trích từ nghi_phep_dac_biet.md.\n\n# Chính sách nghỉ phép đặc biệt > Phiên bản: 1.1 | Ngày hiệu lực: 01/03/2024 | Phòng ban: Nhân sự ## Các trường hợp được nghỉ phép đặc biệt Nhân viên được nghỉ có lương trong các trường hợp sau đây mà không trừ vào phép năm: - **Kết hôn**: 3 ngày làm việc",
+      "Trích từ thu_viec.md.\n\nPhụ cấp ăn trưa được áp dụng đầy đủ từ ngày đầu tiên. ## Quyền lợi trong thử việc Nhân viên thử việc **KHÔNG được nghỉ phép năm**. Trường hợp cần nghỉ việc riêng, nhân viên thử việc phải xin nghỉ không lương và được trưởng phòng phê duyệt."
+    ],
+    "ground_truth": "KHÔNG. Nhân viên thử việc không được nghỉ phép năm. Nếu cần nghỉ phải xin nghỉ không lương và được trưởng phòng phê duyệt. Đây là negation trap — câu trả lời đúng là phủ định."
+  },
+  {
+    "id": 47,
+    "distribution": "adversarial",
+    "question": "Khi phát hiện malware trên máy tính công ty, nhân viên có nên tự xử lý không?",
+    "answer": "## Trả lời\n\nTheo tài liệu **bao_mat_su_co.md**, nhân viên **tuyệt đối không nên tự ý xử lý malware**. Cụ thể:\n\n> Tuyệt đối **không tự ý xử lý malware** hoặc tìm cách khắc phục mà không có sự hướng dẫn của đội CNTT.\n\nKhi phát hiện malware trên máy tính công ty, nhân viên cần:\n\n- **Không tự tìm cách khắc phục** hoặc xóa/xử lý malware một mình.\n- **Liên hệ đội CNTT** để được hướng dẫn xử lý đúng quy trình.\n- Sự cố malware trên máy tính được phân loại ở mức **\"Trung bình\"**, với thời gian xử lý yêu cầu là **trong 8 giờ**.",
+    "contexts": [
+      "Trích từ nghi_om.md.\n\nCông ty có quyền yêu cầu khám sức khỏe tổng quát trước khi nhân viên quay lại làm việc.",
+      "Trích từ bao_mat_su_co.md.\n\n- **Cao**: phishing thành công, tài khoản bị chiếm → xử lý trong 4 giờ - **Trung bình**: phát hiện malware trên 1 máy, truy cập trái phép → xử lý trong 8 giờ - **Thấp**: email spam, cảnh báo antivirus tự động → xử lý trong 24 giờ ## Trách nhiệm",
+      "Trích từ bao_mat_su_co.md.\n\nTuyệt đối **không tự ý xử lý malware** hoặc tìm cách khắc phục mà không có sự hướng dẫn của đội CNTT. ## Phân loại sự cố - **Nghiêm trọng**: rò rỉ dữ liệu Bí mật/Tối mật, tấn công ransomware → xử lý trong 2 giờ"
+    ],
+    "ground_truth": "KHÔNG. Tuyệt đối không tự xử lý. Phải báo cáo trong vòng 1 giờ qua helpdesk@cty.vn hoặc hotline CNTT (ext. 9999). Tự xử lý bị coi là vi phạm nghiêm trọng."
+  },
+  {
+    "id": 48,
+    "distribution": "adversarial",
+    "question": "Nhân viên thử việc có được hưởng bảo hiểm sức khỏe PVI không?",
+    "answer": "**Không được hưởng.**\n\nTheo trích dẫn từ `thu_viec.md`:\n\n> *\"Nhân viên thử việc được tham gia bảo hiểm xã hội bắt buộc nhưng **chưa được hưởng** gói bảo hiểm sức khỏe PVI.\"*\n\nNhư vậy, trong thời gian thử việc, nhân viên chỉ được tham gia **bảo hiểm xã hội bắt buộc**, còn gói **bảo hiểm sức khỏe PVI chưa áp dụng** cho nhân viên thử việc.",
+    "contexts": [
+      "Trích từ thu_viec.md.\n\nNhân viên thử việc được tham gia bảo hiểm xã hội bắt buộc nhưng chưa được hưởng gói bảo hiểm sức khỏe PVI. ## Đánh giá thử việc Quản lý trực tiếp thực hiện đánh giá vào ngày thứ 30 (giữa kỳ) và ngày thứ 55 (cuối kỳ).",
+      "Trích từ nghi_om.md.\n\nCông ty có quyền yêu cầu khám sức khỏe tổng quát trước khi nhân viên quay lại làm việc.",
+      "Trích từ thuong_tet.md.\n\nNhân viên nghỉ việc trước ngày chi trả sẽ không được hưởng thưởng Tết, trừ trường hợp nghỉ hưu hoặc hết hạn hợp đồng."
+    ],
+    "ground_truth": "KHÔNG. Nhân viên thử việc chưa được hưởng gói PVI. Chỉ được tham gia BHXH bắt buộc. Đây là negation trap — pipeline hay nhầm vì tài liệu PVI không đề cập rõ exclusion."
+  },
+  {
+    "id": 49,
+    "distribution": "adversarial",
+    "question": "Theo chính sách nghỉ phép cũ (v2023), nhân viên được nghỉ bao nhiêu ngày? Còn chính sách nào đang có hiệu lực hiện tại?",
+    "answer": "Theo chính sách nghỉ phép năm (Phiên bản 2023), mỗi nhân viên chính thức được hưởng **12 ngày phép năm** có lương.\n\nHiện tại, chính sách nghỉ phép không lương (Phiên bản 1.2) có ngày hiệu lực là 01/07/2023 đang được áp dụng cho những nhân viên chính thức đã hết phép năm.",
+    "contexts": [
+      "Trích từ nghi_phep_khong_luong.md.\n\n# Chính sách nghỉ phép không lương > Phiên bản: 1.2 | Ngày hiệu lực: 01/07/2023 | Phòng ban: Nhân sự ## Điều kiện áp dụng Nhân viên chính thức đã hết phép năm có thể xin nghỉ phép không lương.",
+      "Trích từ nghi_phep_nam_v2023.md.\n\n# Chính sách nghỉ phép năm (Phiên bản 2023) > Phiên bản: 1.0 | Ngày hiệu lực: 01/01/2023 | Phòng ban: Nhân sự ## Số ngày phép năm Mỗi nhân viên chính thức được hưởng **12 ngày phép năm** có lương.",
+      "Trích từ hoan_chi_dao_tao.md.\n\n# Chính sách hoàn chi đào tạo > Phiên bản: 1.1 | Ngày hiệu lực: 01/07/2023 | Phòng ban: Nhân sự & Tài chính ## Điều kiện được tài trợ"
+    ],
+    "ground_truth": "Chính sách cũ v2023 (ĐÃ HẾT HIỆU LỰC): 12 ngày phép, thêm 1 ngày/5 năm thâm niên. Chính sách HIỆN HÀNH v2024: 15 ngày cơ bản, thêm 1 ngày/3 năm thâm niên. Pipeline tốt phải nhận ra v2024 là bản hiệu lực."
+  },
+  {
+    "id": 50,
+    "distribution": "adversarial",
+    "question": "Nhân viên Manager có thể dùng VPN cá nhân (như NordVPN) khi WFH để tăng bảo mật thêm không?",
+    "answer": "## Không tìm thấy\n\nThông tin trong các tài liệu được cung cấp **không đề cập** đến việc sử dụng VPN cá nhân (như NordVPN) khi làm việc từ xa.\n\nNội dung liên quan đến WFH chỉ nêu:\n- Phải sử dụng **thiết bị công ty** hoặc **thiết bị cá nhân đã cài MDM**.\n- Phải tham gia đầy đủ các cuộc họp online theo lịch.\n- Một số vị trí không được áp dụng WFH (lễ tân, nhân viên kho, bảo vệ, nhân viên vận hành hạ tầng IT).\n\nĐể biết chính sách về VPN cá nhân, bạn cần tham khảo thêm tài liệu bảo mật hoặc liên hệ bộ phận CNTT.",
+    "contexts": [
+      "Trích từ lam_viec_tu_xa.md.\n\n- Sử dụng thiết bị công ty hoặc thiết bị cá nhân đã cài MDM - Tham gia đầy đủ các cuộc họp online theo lịch ## Hạn chế Một số vị trí không được áp dụng WFH: lễ tân, nhân viên kho, bảo vệ, nhân viên vận hành hạ tầng IT.",
+      "Trích từ mentor_buddy.md.\n\nBuddy là nhân viên cùng phòng ban, thâm niên từ 6 tháng. ## Quy tắc quan trọng Mentor và Buddy phải là **hai người khác nhau** để đảm bảo nhân viên mới có nhiều nguồn hỗ trợ đa dạng. Quản lý trực tiếp không được làm Mentor hoặc Buddy.",
+      "Trích từ bao_mat_su_co.md.\n\nKhi phát hiện hoặc nghi ngờ sự cố bảo mật, nhân viên **phải báo cáo trong vòng 1 giờ** qua email **helpdesk@cty.vn** hoặc hotline CNTT nội bộ (ext. 9999)."
+    ],
+    "ground_truth": "KHÔNG. Chính sách VPN v1.3 cấm sử dụng VPN cá nhân (NordVPN, ExpressVPN) trong mạng công ty. Bắt buộc dùng VPN WireGuard của công ty. Đây là policy contradiction trap — câu hỏi nghe hợp lý nhưng vi phạm chính sách."
+  }
+]
