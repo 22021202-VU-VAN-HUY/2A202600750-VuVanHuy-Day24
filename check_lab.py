@@ -6,6 +6,10 @@ import os
 import subprocess
 import sys
 
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8")
+    sys.stderr.reconfigure(encoding="utf-8")
+
 
 def check(label: str, condition: bool, detail: str = "") -> bool:
     icon = "✓" if condition else "✗"
@@ -89,7 +93,7 @@ def main():
     # 6. Test suite
     print("\n[6] Test suite:")
     result = subprocess.run(
-        ["pytest", "tests/", "--tb=short", "-q"],
+        [sys.executable, "-m", "pytest", "tests/", "--tb=short", "-q"],
         capture_output=True, text=True,
     )
     tests_ok = result.returncode == 0

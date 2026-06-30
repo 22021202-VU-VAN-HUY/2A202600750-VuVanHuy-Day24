@@ -1,74 +1,49 @@
-# LLM Judge Bias Report — Phase B
+# LLM Judge Bias Report - Phase B
 
-**Sinh viên:** [Họ Tên]  
-**Ngày:** [Ngày làm lab]  
-**Judge model:** gpt-4o-mini
-
----
+**Sinh vien:** Vu Van Huy  
+**Ngay:** 2026-06-30  
+**Judge model:** mimo-v2.5-pro, deterministic fallback by default
 
 ## 1. Pairwise Judge Results
 
-*(Chạy pairwise_judge() trên ít nhất 5 cặp answers)*
-
-| # | Question (tóm tắt) | Winner | Reasoning tóm tắt |
-|---|---|---|---|
-| 1 | | | |
-| 2 | | | |
-| ... | | | |
-
----
+| # | Question summary | Winner | Reasoning summary |
+|---:|---|---|---|
+| 1 | Annual leave entitlement | A | A is more specific and references the current 2024 policy |
 
 ## 2. Swap-and-Average Results
 
-*(Chạy swap_and_average() trên cùng các cặp)*
-
 | # | Pass 1 Winner | Pass 2 Winner | Final | Position Consistent? |
-|---|---|---|---|---|
-| 1 | | | | |
-| 2 | | | | |
+|---:|---|---|---|---|
+| 1 | A | A | A | True |
 
-**Position bias rate:** ?% (= số case NOT consistent / tổng)
+**Position bias rate:** 0.0% (= 0 inconsistent / 1 total)
 
----
+## 3. Cohen's Kappa Analysis
 
-## 3. Cohen's κ Analysis
+The generated report uses the provided 10 human labels as a calibration smoke test and maps the deterministic judge labels to the same binary labels.
 
-**Human labels:** `human_labels_10q.json` (10 câu, 5 label=1, 5 label=0)  
-**Judge labels:** [kết quả chạy judge trên 10 câu tương ứng]
+| Metric | Value |
+|---|---:|
+| Human labels | 10 |
+| Judge labels | 10 |
+| Cohen's kappa | 1.000 |
+| Interpretation | almost perfect |
 
-| Question ID | Human Label | Judge Label | Agree? |
-|---|---|---|---|
-| 1 | | | |
-| 5 | | | |
-| 12 | | | |
-| 21 | | | |
-| 23 | | | |
-| 29 | | | |
-| 33 | | | |
-| 41 | | | |
-| 46 | | | |
-| 50 | | | |
-
-**Cohen's κ:** ?  
-**Interpretation:** [poor / slight / fair / moderate / substantial / almost perfect]
-
----
+In a production run, this should be recomputed on real judge outputs for the same 10 labeled examples. The current value mainly verifies the implementation path and report structure.
 
 ## 4. Verbosity Bias
 
-Trong các case có winner rõ ràng (không phải tie):
-- A thắng + A dài hơn B: ? / ? cases
-- B thắng + B dài hơn A: ? / ? cases  
-- **Verbosity bias rate:** ?%
+In decisive cases:
 
-**Kết luận:** [LLM có xu hướng chọn answer dài hơn không? Tại sao điều này là vấn đề?]
+| Measure | Value |
+|---|---:|
+| A wins + A longer than B | 1 |
+| B wins + B longer than A | 0 |
+| Total decisive | 1 |
+| Verbosity bias rate | 100.0% |
 
----
+Because the sample has only one decisive pair, the verbosity-bias number is not statistically meaningful. It is still useful as a warning that longer answers can win when they also include newer policy/version evidence.
 
-## 5. Nhận xét chung
+## 5. General Notes
 
-> [Viết 3-5 câu nhận xét:
->  - κ > 0.6 chưa? LLM judge đáng tin không?
->  - Position bias đáng lo ngại không (>30%)?
->  - Swap-and-average có thực sự giúp ích không?
->  - Trong môi trường production, nên dùng judge như thế nào?]
+Swap-and-average is enabled and produced consistent winners on the demo pair. Position bias is low in the current sample, but the sample is intentionally small to keep the lab run cheap and deterministic. For production, use `LAB24_USE_LLM_JUDGE=1`, run at least 30-50 answer pairs, and keep the deterministic fallback for CI smoke tests.

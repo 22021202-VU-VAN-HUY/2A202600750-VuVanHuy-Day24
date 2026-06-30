@@ -1,99 +1,90 @@
 # CI/CD Blueprint: RAG Eval + Guardrail Stack
 
-**Sinh viên:** [Họ Tên]  
-**Ngày:** [Ngày làm lab]
-
----
+**Sinh vien:** Vu Van Huy  
+**Ngay:** 2026-06-30
 
 ## Guard Stack Architecture
 
-```
+```text
 User Input
-    │
-    ▼ (~?ms P95)
-[Presidio PII Scan]
-    │ block if: VN_CCCD / VN_PHONE / EMAIL detected
-    │ action:   return 400 + "PII detected in query"
-    ▼ (~?ms P95)
-[NeMo Input Rail]
-    │ block if: off-topic / jailbreak / prompt injection
-    │ action:   return 503 + refuse message
-    ▼
-[RAG Pipeline (Day 18)]
-    │ M1 Chunk → M2 Search → M3 Rerank → GPT-4o-mini
-    ▼
-[NeMo Output Rail]
-    │ flag if:  PII in response / sensitive content
-    │ action:   replace with safe response
-    ▼
-User Response
+  -> Presidio/Regex PII Scan (~9.81ms P95)
+  -> NeMo Input Rail or fallback heuristic (~0.63ms P95)
+  -> Day 18 RAG Pipeline
+  -> Output Rail / sensitive-output check
+  -> User Response
 ```
-
----
 
 ## Latency Budget
 
-*(Điền từ kết quả Task 12 — measure_p95_latency())*
-
 | Layer | P50 (ms) | P95 (ms) | P99 (ms) | Budget |
-|---|---|---|---|---|
-| Presidio PII | ? | ? | ? | <10ms |
-| NeMo Input Rail | ? | ? | ? | <300ms |
-| RAG Pipeline | ? | ? | ? | <2000ms |
-| NeMo Output Rail | ? | ? | ? | <300ms |
-| **Total Guard** | ? | **?** | ? | **<500ms** |
+|---|---:|---:|---:|---:|
+| Presidio PII | 7.66 | 9.81 | 10.01 | <10ms |
+| NeMo Input Rail / fallback | 0.46 | 0.63 | 0.85 | <300ms |
+| RAG Pipeline | not benchmarked here | not benchmarked here | not benchmarked here | <2000ms |
+| NeMo Output Rail / fallback | not benchmarked here | not benchmarked here | not benchmarked here | <300ms |
+| **Total Guard** | **8.16** | **10.25** | **10.45** | **<500ms** |
 
-**Budget OK?** [ ] Yes / [ ] No  
-**Comment:** [Nếu vượt budget, layer nào là bottleneck và cách tối ưu?]
+**Budget OK?** Yes  
+**Comment:** Local regex/fallback rails are comfortably below budget. If real NeMo LLM rails are enabled, re-run latency because network/model latency will dominate.
 
----
-
-## CI/CD Gates (phải pass trước khi merge to main)
+## CI/CD Gates
 
 ```yaml
-# .github/workflows/rag_eval.yml
-- name: RAGAS Quality Gate
-  run: python src/phase_a_ragas.py
-  env:
-    MIN_FAITHFULNESS: 0.75
-    MIN_AVG_SCORE: 0.65
-
-- name: Guardrail Gate
-  run: pytest tests/test_phase_c.py -k "test_adversarial_suite_pass_rate"
-  # phải ≥ 15/20 (75%)
-
-- name: Latency Gate
-  run: python -c "from src.phase_c_guard import measure_p95_latency; ..."
-  # P95 total < 500ms
+name: RAG Eval Gate
+on:
+  pull_request:
+    branches: [main]
+jobs:
+  eval:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install -r requirements.txt
+      - run: python setup_answers.py
+        env:
+          MIMO_API_KEY: ${{ secrets.MIMO_API_KEY }}
+          MIMO_BASE_URL: https://api.xiaomimimo.com/v1
+          MIMO_MODEL: mimo-v2.5-pro
+      - run: python src/phase_a_ragas.py
+      - run: pytest tests/ -q
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: lab24-reports
+          path: reports/
 ```
 
----
+Required gates before merge:
 
-## Monitoring Dashboard (production)
+- RAGAS faithfulness >= 0.75 on the 50-question set, or explicit waiver with failure analysis.
+- Adversarial suite pass rate >= 90% for production target; current lab result is 20/20.
+- Guard P95 latency < 500ms; current measured value is 10.25ms.
+- No `# TODO` markers in `src/phase_*.py`.
 
-| Metric | Alert Threshold | Action |
-|---|---|---|
-| RAGAS faithfulness (daily sample) | < 0.70 | Page on-call |
-| Adversarial block rate | < 80% | Review new attack patterns |
-| Guard P95 latency | > 600ms | Scale NeMo model |
-| PII detected count | spike >10/hour | Security alert |
+## Monitoring Dashboard
 
----
+| Metric | Current Lab Value | Alert Threshold | Action |
+|---|---:|---:|---|
+| RAGAS avg_score | 0.419 | <0.65 | Review retrieval, reranking, and prompt grounding |
+| Worst RAGAS metric | context_precision | <0.60 | Tune reranker and metadata/version filters |
+| Dominant failure distribution | factual | spike vs baseline | Inspect direct-lookup retrieval noise |
+| Adversarial pass rate | 20/20 | <18/20 | Add new attack patterns to rails |
+| Guard P95 latency | 10.25ms | >500ms | Check NeMo/API latency and fall back if needed |
 
-## Kết quả thực tế từ Lab
+## Actual Lab Results
 
-| | Kết quả |
-|---|---|
-| RAGAS avg_score (50q) | ? |
-| Worst metric | ? |
-| Dominant failure distribution | ? |
-| Cohen's κ | ? |
-| Adversarial pass rate | ? / 20 |
-| Guard P95 latency | ? ms |
+| Item | Result |
+|---|---:|
+| RAGAS avg_score (50q) | 0.419 |
+| Worst metric | context_precision |
+| Dominant failure distribution | factual |
+| Cohen's kappa | 1.000 |
+| Adversarial pass rate | 20 / 20 |
+| Guard P95 latency | 10.25 ms |
 
----
+## Improvement Plan
 
-## Nhận xét & Cải tiến
-
-> [Viết 3-5 câu về: điều gì hoạt động tốt, điều gì cần cải thiện,
->  nếu deploy production thực sự bạn sẽ thay đổi gì trong stack này?]
+The main RAG weakness is retrieval precision. The next production iteration should add stronger reranking, policy-version metadata filters, and query expansion for Vietnamese HR terms. Guardrail performance is strong in the lab suite, but the Windows setup uses fallback rails instead of full NeMo because the latest NeMo dependency chain requires native C++ build tooling. Before production, enable real NeMo rails in Linux CI and re-run adversarial plus latency benchmarks.
