@@ -1,12 +1,12 @@
-# Failure Cluster Analysis - Phase A
+# Phân Tích Cụm Lỗi - Phase A
 
 **Sinh viên:** Vũ Văn Huy  
 **Mã học viên:** 2A202600750  
-**Ngay:** 2026-06-30
+**Ngày:** 2026-06-30
 
-## 1. Aggregate RAGAS Scores Theo Distribution
+## 1. Điểm RAGAS Theo Nhóm Câu Hỏi
 
-| Metric | factual | multi_hop | adversarial |
+| Chỉ số | factual | multi_hop | adversarial |
 |---|---:|---:|---:|
 | faithfulness | 0.456 | 0.437 | 0.525 |
 | answer_relevancy | 0.639 | 0.496 | 0.495 |
@@ -14,9 +14,9 @@
 | context_recall | 0.412 | 0.342 | 0.292 |
 | **avg_score** | **0.452** | **0.390** | **0.409** |
 
-## 2. Bottom 10 Questions
+## 2. Bottom 10 Câu Hỏi Có Điểm Thấp Nhất
 
-| Rank | Distribution | Question ID | avg_score | worst_metric |
+| Hạng | Nhóm | ID câu hỏi | avg_score | Chỉ số yếu nhất |
 |---:|---|---:|---:|---|
 | 1 | factual | 5 | 0.238 | context_precision |
 | 2 | multi_hop | 34 | 0.252 | faithfulness |
@@ -29,31 +29,33 @@
 | 9 | adversarial | 50 | 0.314 | context_recall |
 | 10 | multi_hop | 33 | 0.330 | context_recall |
 
-## 3. Failure Cluster Matrix
+## 3. Ma Trận Cụm Lỗi
 
-| worst_metric | factual | multi_hop | adversarial | Total |
+Mỗi ô thể hiện số câu hỏi có chỉ số yếu nhất tương ứng với từng nhóm.
+
+| Chỉ số yếu nhất | factual | multi_hop | adversarial | Tổng |
 |---|---:|---:|---:|---:|
 | faithfulness | 0 | 2 | 0 | 2 |
 | answer_relevancy | 0 | 0 | 0 | 0 |
 | context_precision | 15 | 12 | 3 | 30 |
 | context_recall | 5 | 6 | 7 | 18 |
 
-## 4. Dominant Failure Analysis
+## 4. Phân Tích Lỗi Chủ Đạo
 
-**Dominant distribution:** factual  
-**Dominant metric:** context_precision
+**Nhóm lỗi chủ đạo:** factual  
+**Chỉ số yếu nhất chủ đạo:** context_precision
 
-The most frequent weak metric is context_precision, which means retrieval often returns partially related but noisy chunks. Factual questions have the highest count of weakest-metric cases because even direct lookup questions can retrieve neighboring policy sections, versioned documents, or generic HR chunks. Multi-hop questions still have the lowest average score overall, but their failures split between context recall and faithfulness rather than one single bucket.
+Chỉ số yếu xuất hiện nhiều nhất là `context_precision`, nghĩa là bước retrieval thường lấy về các đoạn tài liệu có liên quan một phần nhưng còn nhiễu. Nhóm factual có số lượng lỗi cao nhất vì ngay cả câu hỏi tra cứu trực tiếp cũng có thể kéo theo các đoạn chính sách lân cận, tài liệu nhiều phiên bản, hoặc các đoạn HR quá chung chung. Nhóm multi_hop có điểm trung bình thấp nhất, nhưng lỗi của nhóm này phân tán giữa `context_recall` và `faithfulness`, thay vì tập trung vào một chỉ số duy nhất.
 
-## 5. Suggested Fixes
+## 5. Hướng Cải Thiện
 
-| Metric yeu | Root cause | Suggested fix |
+| Chỉ số yếu | Nguyên nhân gốc | Cách cải thiện |
 |---|---|---|
-| faithfulness | Answer may combine facts not fully supported by retrieved context | Require citations from retrieved chunks and lower generation temperature |
-| context_recall | Relevant evidence missing from top contexts | Increase BM25/dense top_k before rerank and add query expansion for policy terms |
-| context_precision | Too many irrelevant chunks in final context | Strengthen reranking, add metadata filters for policy/version, reduce final top_k if noisy |
-| answer_relevancy | Answer drifts from exact question intent | Add direct-answer prompt format and reject unsupported extra details |
+| faithfulness | Câu trả lời có thể kết hợp thông tin chưa được context hỗ trợ đầy đủ | Bắt buộc trích dẫn từ context, giảm temperature, yêu cầu chỉ trả lời dựa trên tài liệu |
+| context_recall | Context top-k thiếu đoạn bằng chứng quan trọng | Tăng BM25/dense top_k trước khi rerank, thêm query expansion cho thuật ngữ HR tiếng Việt |
+| context_precision | Context cuối chứa quá nhiều đoạn không cần thiết | Tăng chất lượng reranking, thêm bộ lọc metadata theo loại chính sách và phiên bản, giảm final top_k nếu nhiễu |
+| answer_relevancy | Câu trả lời lệch khỏi đúng ý hỏi | Chuẩn hóa prompt trả lời trực tiếp, chặn thông tin ngoài phạm vi câu hỏi |
 
-## 6. Adversarial Distribution Notes
+## 6. Nhận Xét Về Nhóm Adversarial
 
-Adversarial avg_score is 0.409, lower than factual 0.452 but higher than multi_hop 0.390. This suggests version-conflict and trap questions are difficult, but multi-step retrieval/calculation is still the weakest area. Two adversarial questions appear in the bottom 10: password rotation and personal VPN usage. Both are version/specific-policy style questions where the retriever needs the exact current policy chunk, not just a semantically nearby security document.
+Điểm trung bình của nhóm adversarial là 0.409, thấp hơn factual 0.452 nhưng cao hơn multi_hop 0.390. Điều này cho thấy các câu hỏi bẫy về phiên bản/chính sách vẫn khó, nhưng điểm yếu lớn nhất của pipeline hiện tại nằm ở câu hỏi nhiều bước và câu hỏi cần tính toán. Có 2 câu adversarial nằm trong bottom 10: câu về chu kỳ đổi mật khẩu và câu về dùng VPN cá nhân. Cả hai đều cần retrieval đúng tài liệu chính sách hiện hành, không chỉ lấy đoạn bảo mật gần nghĩa.

@@ -1,32 +1,34 @@
-# CI/CD Blueprint: RAG Eval + Guardrail Stack
+# Blueprint CI/CD: RAG Eval + Guardrail Stack
 
 **Sinh viên:** Vũ Văn Huy  
 **Mã học viên:** 2A202600750  
-**Ngay:** 2026-06-30
+**Ngày:** 2026-06-30
 
-## Guard Stack Architecture
+## Kiến Trúc Guard Stack
 
 ```text
 User Input
   -> Presidio/Regex PII Scan (~9.81ms P95)
-  -> NeMo Input Rail or fallback heuristic (~0.63ms P95)
+  -> NeMo Input Rail hoặc fallback heuristic (~0.63ms P95)
   -> Day 18 RAG Pipeline
-  -> Output Rail / sensitive-output check
+  -> Output Rail / kiểm tra output nhạy cảm
   -> User Response
 ```
 
-## Latency Budget
+Luồng bảo vệ gồm nhiều lớp. Lớp đầu phát hiện PII như CCCD, CMND, số điện thoại Việt Nam và email. Lớp tiếp theo chặn jailbreak, prompt injection, yêu cầu dữ liệu nhân viên và câu hỏi ngoài phạm vi HR. Sau khi RAG sinh câu trả lời, output rail kiểm tra lại để tránh trả về thông tin nhạy cảm.
 
-| Layer | P50 (ms) | P95 (ms) | P99 (ms) | Budget |
+## Ngân Sách Độ Trễ
+
+| Lớp | P50 (ms) | P95 (ms) | P99 (ms) | Ngân sách |
 |---|---:|---:|---:|---:|
 | Presidio PII | 7.66 | 9.81 | 10.01 | <10ms |
 | NeMo Input Rail / fallback | 0.46 | 0.63 | 0.85 | <300ms |
-| RAG Pipeline | not benchmarked here | not benchmarked here | not benchmarked here | <2000ms |
-| NeMo Output Rail / fallback | not benchmarked here | not benchmarked here | not benchmarked here | <300ms |
-| **Total Guard** | **8.16** | **10.25** | **10.45** | **<500ms** |
+| RAG Pipeline | chưa benchmark trong báo cáo này | chưa benchmark trong báo cáo này | chưa benchmark trong báo cáo này | <2000ms |
+| NeMo Output Rail / fallback | chưa benchmark trong báo cáo này | chưa benchmark trong báo cáo này | chưa benchmark trong báo cáo này | <300ms |
+| **Tổng guard** | **8.16** | **10.25** | **10.45** | **<500ms** |
 
-**Budget OK?** Yes  
-**Comment:** Local regex/fallback rails are comfortably below budget. If real NeMo LLM rails are enabled, re-run latency because network/model latency will dominate.
+**Đạt ngân sách?** Có  
+**Nhận xét:** Regex/fallback rail chạy local nên nhanh hơn nhiều so với ngân sách. Nếu bật NeMo rail thật qua LLM/API, cần đo lại latency vì độ trễ mạng và model sẽ chiếm phần lớn thời gian.
 
 ## CI/CD Gates
 
@@ -58,34 +60,34 @@ jobs:
           path: reports/
 ```
 
-Required gates before merge:
+Các điều kiện nên chặn merge:
 
-- RAGAS faithfulness >= 0.75 on the 50-question set, or explicit waiver with failure analysis.
-- Adversarial suite pass rate >= 90% for production target; current lab result is 20/20.
-- Guard P95 latency < 500ms; current measured value is 10.25ms.
-- No `# TODO` markers in `src/phase_*.py`.
+- RAGAS faithfulness >= 0.75 trên bộ 50 câu hỏi, hoặc phải có ghi chú miễn trừ kèm phân tích lỗi.
+- Adversarial suite pass rate >= 90% cho mục tiêu production; kết quả lab hiện tại là 20/20.
+- Guard P95 latency < 500ms; kết quả đo hiện tại là 10.25ms.
+- Không còn `# TODO` trong `src/phase_*.py`.
 
 ## Monitoring Dashboard
 
-| Metric | Current Lab Value | Alert Threshold | Action |
+| Chỉ số | Giá trị lab hiện tại | Ngưỡng cảnh báo | Hành động |
 |---|---:|---:|---|
-| RAGAS avg_score | 0.419 | <0.65 | Review retrieval, reranking, and prompt grounding |
-| Worst RAGAS metric | context_precision | <0.60 | Tune reranker and metadata/version filters |
-| Dominant failure distribution | factual | spike vs baseline | Inspect direct-lookup retrieval noise |
-| Adversarial pass rate | 20/20 | <18/20 | Add new attack patterns to rails |
-| Guard P95 latency | 10.25ms | >500ms | Check NeMo/API latency and fall back if needed |
+| RAGAS avg_score | 0.419 | <0.65 | Kiểm tra retrieval, reranking và prompt grounding |
+| Metric RAGAS yếu nhất | context_precision | <0.60 | Tinh chỉnh reranker và bộ lọc metadata/version |
+| Nhóm lỗi chủ đạo | factual | tăng bất thường so với baseline | Kiểm tra nhiễu retrieval ở câu hỏi tra cứu trực tiếp |
+| Adversarial pass rate | 20/20 | <18/20 | Bổ sung attack patterns mới vào rails |
+| Guard P95 latency | 10.25ms | >500ms | Kiểm tra NeMo/API latency và bật fallback nếu cần |
 
-## Actual Lab Results
+## Kết Quả Thực Tế Từ Lab
 
-| Item | Result |
+| Hạng mục | Kết quả |
 |---|---:|
 | RAGAS avg_score (50q) | 0.419 |
-| Worst metric | context_precision |
-| Dominant failure distribution | factual |
+| Metric yếu nhất | context_precision |
+| Nhóm lỗi chủ đạo | factual |
 | Cohen's kappa | 1.000 |
 | Adversarial pass rate | 20 / 20 |
 | Guard P95 latency | 10.25 ms |
 
-## Improvement Plan
+## Kế Hoạch Cải Thiện
 
-The main RAG weakness is retrieval precision. The next production iteration should add stronger reranking, policy-version metadata filters, and query expansion for Vietnamese HR terms. Guardrail performance is strong in the lab suite, but the Windows setup uses fallback rails instead of full NeMo because the latest NeMo dependency chain requires native C++ build tooling. Before production, enable real NeMo rails in Linux CI and re-run adversarial plus latency benchmarks.
+Điểm yếu chính của RAG hiện tại là độ chính xác của retrieval. Vòng cải thiện tiếp theo nên tập trung vào reranking mạnh hơn, bộ lọc metadata theo phiên bản chính sách, và query expansion cho thuật ngữ HR tiếng Việt. Guardrail đạt kết quả tốt trên bộ adversarial lab, nhưng môi trường Windows đang dùng fallback rail thay vì NeMo đầy đủ vì chuỗi dependency mới nhất của NeMo cần native C++ build tooling. Trước khi đưa vào production, nên bật NeMo rail thật trong Linux CI rồi chạy lại benchmark adversarial và latency.
