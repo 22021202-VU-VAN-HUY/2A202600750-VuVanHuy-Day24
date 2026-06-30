@@ -19,7 +19,7 @@ scipy>=1.11                      # Cohen's κ calculation
 presidio-analyzer>=2.2           # PII detection engine
 presidio-anonymizer>=2.2         # PII anonymization
 spacy>=3.7                       # Required by presidio-analyzer
-nemoguardrails>=0.9              # NeMo Guardrails (topic + content rails via LLM API)
+nemoguardrails>=0.9; platform_system != "Windows"  # Optional on Windows: pulls annoy, which needs C++ Build Tools.
 
 # After pip install, run:
 #   python -m spacy download en_core_web_lg
