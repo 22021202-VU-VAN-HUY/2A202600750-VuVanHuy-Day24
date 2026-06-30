@@ -11,6 +11,7 @@ langchain-community>=0.2,<0.3
 langchain-openai>=0.1,<0.2
 datasets>=2.19
 openai>=1.30
+pytest>=8.0
 
 # ── Day 24 new: LLM Judge ────────────────────────────────────────────────────
 scipy>=1.11                      # Cohen's κ calculation
