@@ -1,6 +1,7 @@
 # LLM Judge Bias Report - Phase B
 
-**Sinh vien:** Vu Van Huy  
+**Sinh viên:** Vũ Văn Huy  
+**Mã học viên:** 2A202600750  
 **Ngay:** 2026-06-30  
 **Judge model:** mimo-v2.5-pro, deterministic fallback by default
 

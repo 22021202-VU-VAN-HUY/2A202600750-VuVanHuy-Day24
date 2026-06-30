@@ -1,6 +1,7 @@
 # Failure Cluster Analysis - Phase A
 
-**Sinh vien:** Vu Van Huy  
+**Sinh viên:** Vũ Văn Huy  
+**Mã học viên:** 2A202600750  
 **Ngay:** 2026-06-30
 
 ## 1. Aggregate RAGAS Scores Theo Distribution
